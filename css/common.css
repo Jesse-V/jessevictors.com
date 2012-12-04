@@ -1,0 +1,126 @@
+html
+{
+	 height: 100%; /* relates to .page's min-height property */
+}
+
+body
+{
+	margin: 15px 0px;
+	padding: 0px;
+	background-color: #A0A0A0;
+	height: 90%;
+}
+
+.page
+{
+	font-size: 14pt;
+	background-color: white;
+	width: 70%;
+	min-height: 100%; /* the height of the webpage is a minimum of 80% the height of the browser window */
+	min-width: 700px;
+	margin: 0px auto;
+}
+
+.header
+{
+	font-family: 'carme', sans-serif;
+	background-color: #424869;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1f222e), to(#424869));
+	background: -webkit-linear-gradient(top, #1f222e, #424869) no-repeat;
+	background: -moz-linear-gradient(top, #1f222e, #424869) no-repeat;
+	background: -o-linear-gradient(top, #1f222e, #424869) no-repeat;
+	background: -ms-linear-gradient(top, #1f222e, #424869) no-repeat;
+	background: linear-gradient(top, #1f222e, #424869) no-repeat;
+	-moz-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+	position: relative;
+	z-index: 1;
+	height: 50px;
+}
+
+.headerWrapper, .headerContent
+{
+	float: right;
+	position: relative;
+}
+
+.headerWrapper
+{
+	right: 50%;
+}
+
+.headerContent
+{
+	right: -50%;
+}
+
+.headerContent, .headerContent a
+{
+	color: white;
+}
+
+.headerContent a
+{
+	text-decoration: none;
+}
+
+.headerContent .item
+{
+	display: inline-block;
+	padding: 14px 30px;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.headerContent a:first-child:hover
+{
+	color: #8c8cff;
+}
+
+.headerContent a:nth-child(2):hover
+{
+	color: #ff6767;
+}
+
+.headerContent a:nth-child(3):hover
+{
+	color: #9aff8c;
+}
+
+.headerContent a:nth-child(4):hover
+{
+	color: #ffa13c;
+}
+
+.headerContent a:nth-child(5):hover
+{
+	color: #3cfff7;
+}
+
+.content
+{
+	background: url('../images/content-bg.png') repeat-x;
+}
+
+.content .title
+{
+	color: blue;
+	text-align: center;
+	font-family: "Arial", Arial, sans-serif;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 24pt;
+	width: 80%;
+	margin: 0px auto;
+	padding: 20px 0px;
+	border-bottom: 2px dotted gray;
+}
+
+.content .text
+{
+	font-family: "Times New Roman";
+	margin: 20px 40px 0px;
+	padding-bottom: 10px;
+}
