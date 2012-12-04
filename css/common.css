@@ -39,13 +39,13 @@ body
 	height: 50px;
 }
 
-.headerWrapper, .headerContent
+.headerOffset, .headerContent
 {
 	float: right;
 	position: relative;
 }
 
-.headerWrapper
+.headerOffset
 {
 	right: 50%;
 }
