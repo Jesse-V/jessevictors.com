@@ -35,3 +35,10 @@
 {
 	float: right;
 }
+
+iframe
+{
+	display: inline-block;
+	float: right;
+	margin: 10px 0px 10px 10px;
+}

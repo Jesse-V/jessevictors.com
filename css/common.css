@@ -55,6 +55,15 @@ body
 	right: -50%;
 }
 
+.headerContent .item
+{
+	display: inline-block;
+	margin: 14px 30px;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: bold;
+}
+
 .headerContent, .headerContent a
 {
 	color: white;
@@ -63,15 +72,12 @@ body
 .headerContent a
 {
 	text-decoration: none;
+	border-right: 2px dotted green;
 }
 
-.headerContent .item
+.headerContent a:last-child
 {
-	display: inline-block;
-	padding: 14px 30px;
-	cursor: pointer;
-	font-size: 18px;
-	font-weight: bold;
+	border-right: none;
 }
 
 .headerContent a:first-child:hover
