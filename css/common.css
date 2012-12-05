@@ -124,3 +124,9 @@ body
 	margin: 20px 40px 0px;
 	padding-bottom: 10px;
 }
+
+.footer
+{
+	min-height: 5%;
+	max-height: 30px;
+}
