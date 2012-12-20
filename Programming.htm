@@ -2,62 +2,119 @@
 <html id="top">
 	<head>
 		<title>Programming</title>
-		<link href='http://fonts.googleapis.com/css?family=Syncopate:700|Carme' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="css/common.css">
-		<link rel="stylesheet" type="text/css" href="css/Programming.css">
 
-		<script src="https://apis.google.com/js/plusone.js"></script>
-    	<script src="http://connect.facebook.net/en_US/all.js?xfbml=1"></script>
-		<meta property="og:title" content="LikeJesseVictors" />
+		<meta charset="UTF-8">
+		<meta property="og:title" content="Programming - JesseVictors.com" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="http://jessevictors.com" />
 		<meta property="og:image" content="http://www.businesspundit.com/wp-content/uploads/2009/10/zzzzhome.png" />
 		<meta property="og:site_name" content="JesseVictors.com" />
 		<meta property="fb:admins" content="1817148529" />
 
-	</head>
+		<link href='http://fonts.googleapis.com/css?family=Syncopate:700|Carme' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/Programming.css">
+		<!--<link rel="stylesheet" type="text/css" href="css/navStyles.css">-->
 
-	<!-- http://php.net/manual/en/reserved.variables.server.php -->
+		<script src="https://apis.google.com/js/plusone.js"></script>
+	</head>
 
 	<body>
 		<div id="fb-root"></div>
-		<!--<script>(function(d, s, id)
+		<script>(function(d, s, id)
 			{
 			  var js, fjs = d.getElementsByTagName(s)[0];
 			  if (d.getElementById(id))
-			  	return;
+				return;
 			  js = d.createElement(s);
 			  js.id = id;
 			  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
 			  fjs.parentNode.insertBefore(js, fjs);
 			}
 			(document, 'script', 'facebook-jssdk'));
-		</script>-->
+		</script>
 
-		<div class="page">
-			<div class="header">
-				<div class="headerOffset">
-					<div class="headerContent">
-						<a href="index.htm">
-							<span class="item">Home</span>
-						</a>
+		<div id="page">
+			<div id="header">
+				<p id="access">
+					<a accesskey="s" href="#content">Skip Navigation</a>
+				</p>
 
-						<a href="Education.htm">
-							<span class="item">Education</span>
-						</a>
-
-						<a href="Personal.htm">
-							<span class="item">About Me</span>
-						</a>
-
-						<a href="Programming.htm">
-							<span class="item">Programming</span>
-						</a>
-
-						<a href="Photos.htm">
-							<span class="item">Photos</span>
-						</a>
-					</div>
+				<div id="headerOffset">
+					<ul id="nav">
+						<li class='hidden item'>
+							<a href='index.htm'>Home</a>
+							<div class="border"></div>
+						</li>
+						<li class='hidden item'>
+							<label>Education</label>
+							<ul>
+								<li style="width:33%">
+									<a href="elementary.htm">Elementary</a>
+								</li>
+								<li style="width:33%">
+									<a href="wasilla_high.htm">Wasilla High School</a>
+								</li>
+								<li style="width:33%">
+									<a href="USU.htm">Utah State University</a>
+								</li>
+							</ul>
+							<div class="border"></div>
+						</li>
+						<li class='hidden item'>
+							<label>About Me</label>
+							<ul>
+								<li style="width:20%">
+									<a href="house-family.htm">House && Family</a>
+								</li>
+								<li style="width:20%">
+									<a href="archery.htm">Archery</a>
+								</li>
+								<li style="width:20%">
+									<a href="scuba_diving.htm">Scuba Diving</a>
+								</li>
+								<li style="width:20%">
+									<a href="FAH.htm">Folding@home</a>
+								</li>
+								<li style="width:20%">
+									<a href="Wikipedia.htm">Wikipedia</a>
+								</li>
+							</ul>
+							<div class="border"></div>
+						</li>
+						<li class='shown item'>
+							<label>Computer Science</label>
+							<ul>
+								<li style="width:25%;">
+									<a href="preamble.htm">Preamble</a>
+								</li>
+								<li style="width:25%;">
+									<a href="Linux.htm">Linux</a>
+								</li>
+								<li style="width:25%;">
+									<a href="how_I_code.htm">How I code</a>
+								</li>
+								<li style="width:25%;">
+									<a href="notable_projects.htm">Notable Projects</a>
+								</li>
+							</ul>
+							<div class="border"></div>
+						</li>
+						<li class='hidden item'>
+							<label>Fun Stuff</label>
+							<ul>
+								<li style="width:33%">
+									<a href="photos.htm">Photos</a>
+								</li>
+								<li style="width:33%">
+									<a href="videos.htm">Videos</a>
+								</li>
+								<li style="width:33%">
+									<a href="music.htm">Music</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 			</div>
 
@@ -67,18 +124,9 @@
 				</div>
 
 				<div class="text">
-					
-
 					<p>
 						I have a passion for technology and computer science. I consider computers and the Internet to be mankind's greatest invention. It continues to impress me how powerful and small computer components actually are, (CPUs are built on the <span class="italics">nanosecond</span> scale!) and I've always been intrigued by the new ways in which we are putting them to use. Nearly everyone around me has their own computer. Behind every one of them is more than just code: the operating system and every program solve so many problems for us, and most of the time we take it for granted. How is that you can run multiple applications at the same time? How can the hard drive&mdash;an relatively slow medium&mdash;efficiently respond to multiple requests for data, or concurrently handle several data transfers that are occuring all at once? There are just some of the difficult problems that computer scientists solve. After a lot of thinking, discussion, planning, and testing, we come up with really clever solutions like the <a href="http://en.wikipedia.org/wiki/LOOK_algorithm">LOOK algorithm</a> and <a href="http://en.wikipedia.org/wiki/Completely_Fair_Scheduler">Completely Fair CPU Scheduler.</a> I really enjoy deep problem solving like that, and looking at problems from a lot of different angles.
-					</p>
-
-					
-				        <div id="plusone"><g:plusone size="medium"></g:plusone></div>
-				       <div class="fb-like" data-href="http://jessevictors.com" data-send="true" data-layout="button_count" data-width="450" data-show-faces="true"></div>
-				        <div id="version"></div>
-
-					
+					</p>					
 					<p>
 						I know a number of different programming languages, some at the application level such as Java, C++, and MIPS assembly, and others designed more for the web, like HTML5, CSS3, <a href="http://lesscss.org/">LESS</a>, Javascript, and PHP. I've worked with Javascript technologies like <a href="http://nodejs.org/">Node.js</a>, <a href="http://www.json.org/">JSON</a>, <a href="http://jquery.com/">JQuery</a>, <a href="http://handlebarsjs.com/">Handlebars</a>, and <a href="http://backbonejs.org/">Backbone</a>. Each language has a purpose, and when used together the product is really amazing. A number of times I'll run across a problem and realize that I could write a program to solve it for me faster than I could solve the problem directly myself. Sudoku is an example. Half an hour later, and my recursive <a href="http://en.wikipedia.org/wiki/Backtracking_algorithm">backtracking algorithm</a> can solve the puzzle in general. :) Obviously, some puzzles are more fun to solve by hand, such as the Rubik's Cube.
 					</p>
@@ -87,15 +135,32 @@
 						List of programs coming soon! In the meantime, check out my <a href="https://github.com/JesseVictors?tab=activity">programming activity on Github</a>. Here are several software projects I'm particuly proud of: <a href="https://github.com/SpeedyShopOne/SpeedyShop">SpeedyShop</a>, <a href="https://github.com/JesseVictors/Victory-Paint">Victory Paint</a>, and a <a href="https://github.com/JesseVictors/Mandelbrot-Fractal">renderer for the Mandelbrot fractal</a>.
 					</p>
 					<p>
-						Clean code
-						maintainable
-						good documentation
-						I plan
-						organized code
-						OO
-						attention to detail
+						<ul>
+							<li>Clean code</li>
+							<li>maintainable</li>
+							<li>good documentation</li>
+							<li>I plan</li>
+							<li>organized code</li>
+							<li>OO</li>
+							<li>attention to detail</li>
+						</ul>
 					</p>
 				</div>
+			</div>
+		</div>
+
+		<div class="static-footer">
+			<div class="sharing">
+				<div class="social fb-like" data-href="http://jessevictors.com" data-send="false" data-layout="button_count" data-width="450">
+				</div>
+
+				<div class="social" id="plusone">
+					<g:plusone size="medium"></g:plusone>
+				</div>
+			</div>
+
+			<div class="feedback">
+				<button>Feedback?</button>
 			</div>
 		</div>
 
