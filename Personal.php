@@ -1,98 +1,7 @@
-<!DOCTYPE html>
-<html id="top">
-	<head>
-		<title>Personal</title>
-		<link href='http://fonts.googleapis.com/css?family=Syncopate:700|Carme' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="css/common.css">
-		<link rel="stylesheet" type="text/css" href="css/Personal.css">
-
-		<link rel="stylesheet" type="text/css" href="css/navStyles.css">
-	</head>
-
-	<body>
-		<div id="page">
-			<div id="header">
-				<p id="access">
-					<a accesskey="s" href="#content">Skip Navigation</a>
-				</p>
-
-				<div id="headerOffset">
-					<ul id="nav">
-						<li class='hidden item'>
-							<a href='index.htm'>Home</a>
-							<div class="border"></div>
-						</li>
-						<li class='hidden item'>
-							<label>Education</label>
-							<ul>
-								<li style="width:33%">
-									<a href="elementary.htm">Elementary</a>
-								</li>
-								<li style="width:33%">
-									<a href="wasilla_high.htm">Wasilla High School</a>
-								</li>
-								<li style="width:33%">
-									<a href="USU.htm">Utah State University</a>
-								</li>
-							</ul>
-							<div class="border"></div>
-						</li>
-						<li class='shown item'>
-							<label>About Me</label>
-							<ul>
-								<li style="width:20%">
-									<a href="house-family.htm">House && Family</a>
-								</li>
-								<li style="width:20%">
-									<a href="archery.htm">Archery</a>
-								</li>
-								<li style="width:20%">
-									<a href="scuba_diving.htm">Scuba Diving</a>
-								</li>
-								<li style="width:20%">
-									<a href="FAH.htm">Folding@home</a>
-								</li>
-								<li style="width:20%">
-									<a href="Wikipedia.htm">Wikipedia</a>
-								</li>
-							</ul>
-							<div class="border"></div>
-						</li>
-						<li class='hidden item'>
-							<label>Computer Science</label>
-							<ul>
-								<li style="width:25%;">
-									<a href="preamble.htm">Preamble</a>
-								</li>
-								<li style="width:25%;">
-									<a href="Linux.htm">Linux</a>
-								</li>
-								<li style="width:25%;">
-									<a href="how_I_code.htm">How I code</a>
-								</li>
-								<li style="width:25%;">
-									<a href="notable_projects.htm">Notable Projects</a>
-								</li>
-							</ul>
-							<div class="border"></div>
-						</li>
-						<li class='hidden item'>
-							<label>Fun Stuff</label>
-							<ul>
-								<li style="width:33%">
-									<a href="photos.htm">Photos</a>
-								</li>
-								<li style="width:33%">
-									<a href="videos.htm">Videos</a>
-								</li>
-								<li style="width:33%">
-									<a href="music.htm">Music</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-			</div>
+<?php
+	require_once('common.php');
+	generateHeaders('Personal', 'About Me', 'http://www.businesspundit.com/wp-content/uploads/2009/10/zzzzhome.png');
+?>
 
 			<div class="content">
 				<div class="title">
@@ -134,9 +43,7 @@
 					</p>           
 				</div>
 			</div>
-		</div>
-
-		<div class="footer">
-		</div>
-	</body>
-</html>
+		
+<?php
+	generateFooter();
+?>

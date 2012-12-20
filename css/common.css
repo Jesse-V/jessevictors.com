@@ -276,3 +276,25 @@ body
 	min-height: 5%;
 	max-height: 30px;
 }
+
+.static-footer
+{
+	position: fixed;
+	bottom: 0px;
+	left: 3px;
+	width: 100%;
+}
+
+.static-footer .sharing .social
+{
+	float: left;
+	margin-right: 15px;
+}
+
+.static-footer .feedback
+{
+	margin-right: 3px;
+	float: right;
+
+	display: none; /* until it actually does something */
+}
