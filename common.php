@@ -1,6 +1,6 @@
 <?php
 	
-	function generateHeaders($pageName, $unusedVariable, $faviconURL)
+	function generateHeaders($pageName, $faviconURL)
 	{
 		$menu = array(
 			"Education" => array(

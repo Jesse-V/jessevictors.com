@@ -203,27 +203,14 @@ body
 	background: url('../images/content-bg.png') repeat-x, url('../images/white.jpg') repeat;
 	border-bottom-right-radius: 30px;
 	border-bottom-left-radius: 30px;
-}
-
-#content .title
-{
-	color: blue;
-	text-align: center;
-	font-family: "Arial", Arial, sans-serif;
-	font-weight: bold;
-	font-style: italic;
-	font-size: 24pt;
-	width: 80%;
-	margin: 0px auto;
-	padding: 70px 0px 20px;
-	border-bottom: 2px dotted gray;
+	padding: 50px 15px 10px;
+	padding-top: 70px;
+	font-family: "Times New Roman";
 }
 
 #content .text
 {
-	font-family: "Times New Roman";
-	margin: 20px 40px 0px;
-	padding-bottom: 10px;
+	
 }
 
 .footer
