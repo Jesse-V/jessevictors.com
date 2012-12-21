@@ -203,14 +203,8 @@ body
 	background: url('../images/content-bg.png') repeat-x, url('../images/white.jpg') repeat;
 	border-bottom-right-radius: 30px;
 	border-bottom-left-radius: 30px;
-	padding: 50px 15px 10px;
-	padding-top: 70px;
+	padding: 70px 15px 10px;
 	font-family: "Times New Roman";
-}
-
-#content .text
-{
-	
 }
 
 .footer
