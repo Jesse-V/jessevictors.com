@@ -49,70 +49,77 @@
 					<ul id="nav">
 						<li class="'.displayStatus('Home', $folder).' item">
 							<a href="../Home/index.php">Home</a>
-							<div class="border"></div>
 						</li>
 						<li class="'.displayStatus('Education', $folder).' item">
 							<label>Education</label>
 							<ul>
 								<li style="width:33%">
 									<a href="../Education/elementary.php">Elementary</a>
+									<div class="border"></div>
 								</li>
 								<li style="width:33%">
 									<a href="../Education/wasilla_high.php">Wasilla High School</a>
+									<div class="border"></div>
 								</li>
 								<li style="width:33%">
 									<a href="../Education/USU.php">Utah State University</a>
 								</li>
 							</ul>
-							<div class="border"></div>
 						</li>
 						<li class="'.displayStatus('AboutMe', $folder).' item">
 							<label>About Me</label>
 							<ul>
 								<li style="width:20%">
 									<a href="../AboutMe/house-family.php">House && Family</a>
+									<div class="border"></div>
 								</li>
 								<li style="width:20%">
 									<a href="../AboutMe/archery.php">Archery</a>
+									<div class="border"></div>
 								</li>
 								<li style="width:20%">
 									<a href="../AboutMe/scuba_diving.php">Scuba Diving</a>
+									<div class="border"></div>
 								</li>
 								<li style="width:20%">
 									<a href="../AboutMe/FAH.php">Folding@home</a>
+									<div class="border"></div>
 								</li>
 								<li style="width:20%">
 									<a href="../AboutMe/Wikipedia.php">Wikipedia</a>
 								</li>
 							</ul>
-							<div class="border"></div>
 						</li>
 						<li class="'.displayStatus('ComputerScience', $folder).' item">
 							<label>Computer Science</label>
 							<ul>
 								<li style="width:25%;">
 									<a href="../ComputerScience/preamble.php">Preamble</a>
+									<div class="border"></div>
 								</li>
 								<li style="width:25%;">
 									<a href="../ComputerScience/Linux.php">Linux</a>
+									<div class="border"></div>
 								</li>
 								<li style="width:25%;">
 									<a href="../ComputerScience/how_I_code.php">How I code</a>
+									<div class="border"></div>
 								</li>
 								<li style="width:25%;">
 									<a href="../ComputerScience/notable_projects.php">Notable Projects</a>
 								</li>
 							</ul>
-							<div class="border"></div>
 						</li>
 						<li class="'.displayStatus('FunStuff', $folder).' item">
 							<label>Fun Stuff</label>
 							<ul>
 								<li style="width:33%">
 									<a href="../FunStuff/photos.php">Photos</a>
+									<div class="border"></div>
 								</li>
 								<li style="width:33%">
 									<a href="../FunStuff/videos.php">Videos</a>
+									<div class="border"></div>
 								</li>
 								<li style="width:33%">
 									<a href="../FunStuff/music.php">Music</a>

@@ -85,13 +85,13 @@ body
 
 #nav .item .border
 {
-	border-right: 2px dotted green;
+	/*border-right: 2px dotted green;
 	position: static;
 	top: 25%;
 	right: 0px;
 	height: 50%;
 
-	display: none; /* until I can get this working... */
+	display: none;  until I can get this working... */
 }
 
 
@@ -138,7 +138,13 @@ body
 
 #nav .item li
 {
-	background: blue;
+	background-color: #2D932D;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2b5178), to(#2D932D));
+	background: -webkit-linear-gradient(top, #2b5178, #2D932D) no-repeat;
+	background: -moz-linear-gradient(top, #2b5178, #2D932D) no-repeat;
+	background: -o-linear-gradient(top, #2b5178, #2D932D) no-repeat;
+	background: -ms-linear-gradient(top, #2b5178, #2D932D) no-repeat;
+	background: linear-gradient(top, #2b5178, #2D932D) no-repeat;
 	width: auto;
 	position: relative;
 	z-index: 5;
@@ -169,7 +175,33 @@ body
 #nav .item li a
 {
 	display: inline;
-  text-align: center;
+	text-align: center;
+}
+
+.item ul li
+{
+	position: relative;
+}
+
+.border
+{
+	border-right: 2px dotted #b83838;
+	position: absolute;
+	top: 25%;
+	right: 0px;
+	height: 50%;
+	z-index: 20;
+}
+
+#nav .item ul li:first-child
+{
+	border-bottom-left-radius: 15px;
+}
+
+#nav .item ul li:last-child
+{
+	border-bottom-right-radius: 15px;
+	border-right: none;
 }
 
 #content
