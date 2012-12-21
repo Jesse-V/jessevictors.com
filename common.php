@@ -1,13 +1,13 @@
 <?php
 	
-	function generateHeaders($pageName, $navParent, $faviconURL)
+	function generateHeaders($pageName, $folder, $faviconURL)
 	{
 		//there's odd tabbing here, but the user's HTML will have correct tabbing
 		echo 
 '<!DOCTYPE html>
 <html id="top">
 	<head>	
-		<title>'.$pageName.'</title>
+		<title>'.$pageName.' - JesseVictors.com</title>
 
 		<meta charset="UTF-8">
 		<meta property="og:title" content="'.$pageName.' - JesseVictors.com" />
@@ -18,8 +18,8 @@
 		<meta property="fb:admins" content="1817148529" />
 
 		<link href="http://fonts.googleapis.com/css?family=Syncopate:700|Carme" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" type="text/css" href="css/common.css">
-		<link rel="stylesheet" type="text/css" href="css/'.$pageName.'.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css">
+		<link rel="stylesheet" type="text/css" href="../css/'.$pageName.'.css">
 
 		<script src="https://apis.google.com/js/plusone.js"></script>
 	</head>
@@ -47,75 +47,75 @@
 
 				<div id="headerOffset">
 					<ul id="nav">
-						<li class="'.displayStatus('Education', $navParent).' item">
-							<a href="index.php">Home</a>
+						<li class="'.displayStatus('Home', $folder).' item">
+							<a href="../Home/index.php">Home</a>
 							<div class="border"></div>
 						</li>
-						<li class="'.displayStatus('Education', $navParent).' item">
+						<li class="'.displayStatus('Education', $folder).' item">
 							<label>Education</label>
 							<ul>
 								<li style="width:33%">
-									<a href="elementary.php">Elementary</a>
+									<a href="../Education/elementary.php">Elementary</a>
 								</li>
 								<li style="width:33%">
-									<a href="wasilla_high.php">Wasilla High School</a>
+									<a href="../Education/wasilla_high.php">Wasilla High School</a>
 								</li>
 								<li style="width:33%">
-									<a href="USU.php">Utah State University</a>
+									<a href="../Education/USU.php">Utah State University</a>
 								</li>
 							</ul>
 							<div class="border"></div>
 						</li>
-						<li class="'.displayStatus('About Me', $navParent).' item">
+						<li class="'.displayStatus('AboutMe', $folder).' item">
 							<label>About Me</label>
 							<ul>
 								<li style="width:20%">
-									<a href="house-family.php">House && Family</a>
+									<a href="../AboutMe/house-family.php">House && Family</a>
 								</li>
 								<li style="width:20%">
-									<a href="archery.php">Archery</a>
+									<a href="../AboutMe/archery.php">Archery</a>
 								</li>
 								<li style="width:20%">
-									<a href="scuba_diving.php">Scuba Diving</a>
+									<a href="../AboutMe/scuba_diving.php">Scuba Diving</a>
 								</li>
 								<li style="width:20%">
-									<a href="FAH.php">Folding@home</a>
+									<a href="../AboutMe/FAH.php">Folding@home</a>
 								</li>
 								<li style="width:20%">
-									<a href="Wikipedia.php">Wikipedia</a>
+									<a href="../AboutMe/Wikipedia.php">Wikipedia</a>
 								</li>
 							</ul>
 							<div class="border"></div>
 						</li>
-						<li class="'.displayStatus('Computer Science', $navParent).' item">
+						<li class="'.displayStatus('ComputerScience', $folder).' item">
 							<label>Computer Science</label>
 							<ul>
 								<li style="width:25%;">
-									<a href="preamble.php">Preamble</a>
+									<a href="../ComputerScience/preamble.php">Preamble</a>
 								</li>
 								<li style="width:25%;">
-									<a href="Linux.php">Linux</a>
+									<a href="../ComputerScience/Linux.php">Linux</a>
 								</li>
 								<li style="width:25%;">
-									<a href="how_I_code.php">How I code</a>
+									<a href="../ComputerScience/how_I_code.php">How I code</a>
 								</li>
 								<li style="width:25%;">
-									<a href="notable_projects.php">Notable Projects</a>
+									<a href="../ComputerScience/notable_projects.php">Notable Projects</a>
 								</li>
 							</ul>
 							<div class="border"></div>
 						</li>
-						<li class="'.displayStatus('Fun Stuff', $navParent).' item">
+						<li class="'.displayStatus('FunStuff', $folder).' item">
 							<label>Fun Stuff</label>
 							<ul>
 								<li style="width:33%">
-									<a href="photos.php">Photos</a>
+									<a href="../FunStuff/photos.php">Photos</a>
 								</li>
 								<li style="width:33%">
-									<a href="videos.php">Videos</a>
+									<a href="../FunStuff/videos.php">Videos</a>
 								</li>
 								<li style="width:33%">
-									<a href="music.php">Music</a>
+									<a href="../FunStuff/music.php">Music</a>
 								</li>
 							</ul>
 						</li>
@@ -128,7 +128,7 @@
 	{
 		echo '
 		</div>
-		<div class="static-footer">
+		<div class="fixed-footer">
 			<div class="sharing">
 				<div class="social fb-like" data-href="http://jessevictors.com" data-send="false" data-layout="button_count" data-width="450">
 				</div>
@@ -150,9 +150,9 @@
 
 	}
 
-	function displayStatus($navLabel, $navParent)
+	function displayStatus($navFolder, $folder)
 	{
-		if ($navLabel === $navParent)
+		if ($navFolder === $folder)
 			return 'shown';
 		else
 			return 'hidden';

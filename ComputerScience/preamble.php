@@ -1,11 +1,11 @@
 <?php
-	require_once('common.php');
-	generateHeaders('Programming', 'Computer Science', 'http://www.businesspundit.com/wp-content/uploads/2009/10/zzzzhome.png');
+	require_once('../common.php');
+	generateHeaders('Preamble', 'ComputerScience', 'http://www.businesspundit.com/wp-content/uploads/2009/10/zzzzhome.png');
 ?>
 
 			<div id="content">
 				<div class="title">
-					Programming
+					Preamble
 				</div>
 
 				<div class="text">
