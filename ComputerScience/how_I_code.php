@@ -9,9 +9,17 @@
 				</div>
 
 				<div class="text">
-					
-					
-					
+					<p>
+						<ul>
+							<li>Clean code</li>
+							<li>maintainable</li>
+							<li>good documentation</li>
+							<li>I plan</li>
+							<li>organized code</li>
+							<li>OO</li>
+							<li>attention to detail</li>
+						</ul>
+					</p>
 				</div>
 			</div>
 
