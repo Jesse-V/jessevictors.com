@@ -1,7 +1,49 @@
 <?php
 	
-	function generateHeaders($pageName, $folder, $faviconURL)
+	function generateHeaders($pageName, $unusedVariable, $faviconURL)
 	{
+		$menu = array(
+			"Education" => array(
+				"folder" => "Education",
+				"dropDown" => array(
+					"Elementary" => "elementary",
+					"Wasilla High School" => "wasilla_high",
+					"Utah State University" => "USU"
+				)
+			),
+
+			"About Me" => array(
+				"folder" => "AboutMe",
+				"dropDown" => array(
+					"House && Family" => "house-family",
+					"Archery" => "archery",
+					"Scuba diving" => "scuba_diving",
+					"Folding@home" => "FAH",
+					"Wikipedia" => "Wikipedia"
+				)
+			),
+
+			"Computer Science" => array(
+				"folder" => "ComputerScience",
+				"dropDown" => array(
+					"Preamble" => "preamble",
+					"Linux" => "Linux",
+					"How I code" => "how_I_code",
+					"Notable Projects" => "notable_projects"
+				)
+			),
+
+			"Fun Stuff" => array(
+				"folder" => "FunStuff",
+				"dropDown" => array(
+					"Music" => "music",
+					"Videos" => "videos",
+					"Photos" => "photos"
+				)
+			)
+		);
+
+
 		//there's odd tabbing here, but the user's HTML will have correct tabbing
 		echo 
 '<!DOCTYPE html>
@@ -12,7 +54,7 @@
 		<meta charset="UTF-8">
 		<meta property="og:title" content="'.$pageName.' - JesseVictors.com" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="http://jessevictors.com" />
+		<meta property="og:url" content="http://jessevictors.com/new_website/" />
 		<meta property="og:image" content="'.$pageName.'" />
 		<meta property="og:site_name" content="JesseVictors.com" />
 		<meta property="fb:admins" content="1817148529" />
@@ -47,86 +89,34 @@
 
 				<div id="headerOffset">
 					<ul id="nav">
-						<li class="'.displayStatus('Home', $folder).' item">
+						<li class="'.submenuStatus('Home').' item">
 							<a href="../Home/index.php">Home</a>
 						</li>
-						<li class="'.displayStatus('Education', $folder).' item">
-							<label>Education</label>
+						';
+
+		foreach ($menu as $topLabel => $item)
+		{
+			echo		'<li class="'.submenuStatus($item['folder']).' item">
+							<label>'.$topLabel.'</label>
 							<ul>
-								<li style="width:33%">
-									<a href="../Education/elementary.php">Elementary</a>
+							';
+
+			$width = floor(1 / count($item['dropDown']) * 100);
+			foreach ($item['dropDown'] as $subLabel => $file)
+			{
+				echo 		'	<li '.isCurrent($file).'style="width:'.$width.'%">
+									<a href="../'.$item['folder'].'/'.$file.'.php">'.$subLabel.'</a>
 									<div class="border"></div>
 								</li>
-								<li style="width:33%">
-									<a href="../Education/wasilla_high.php">Wasilla High School</a>
-									<div class="border"></div>
-								</li>
-								<li style="width:33%">
-									<a href="../Education/USU.php">Utah State University</a>
-								</li>
-							</ul>
+							';
+			}
+			
+			echo			'</ul>
 						</li>
-						<li class="'.displayStatus('AboutMe', $folder).' item">
-							<label>About Me</label>
-							<ul>
-								<li style="width:20%">
-									<a href="../AboutMe/house-family.php">House && Family</a>
-									<div class="border"></div>
-								</li>
-								<li style="width:20%">
-									<a href="../AboutMe/archery.php">Archery</a>
-									<div class="border"></div>
-								</li>
-								<li style="width:20%">
-									<a href="../AboutMe/scuba_diving.php">Scuba Diving</a>
-									<div class="border"></div>
-								</li>
-								<li style="width:20%">
-									<a href="../AboutMe/FAH.php">Folding@home</a>
-									<div class="border"></div>
-								</li>
-								<li style="width:20%">
-									<a href="../AboutMe/Wikipedia.php">Wikipedia</a>
-								</li>
-							</ul>
-						</li>
-						<li class="'.displayStatus('ComputerScience', $folder).' item">
-							<label>Computer Science</label>
-							<ul>
-								<li style="width:25%;">
-									<a href="../ComputerScience/preamble.php">Preamble</a>
-									<div class="border"></div>
-								</li>
-								<li style="width:25%;">
-									<a href="../ComputerScience/Linux.php">Linux</a>
-									<div class="border"></div>
-								</li>
-								<li style="width:25%;">
-									<a href="../ComputerScience/how_I_code.php">How I code</a>
-									<div class="border"></div>
-								</li>
-								<li style="width:25%;">
-									<a href="../ComputerScience/notable_projects.php">Notable Projects</a>
-								</li>
-							</ul>
-						</li>
-						<li class="'.displayStatus('FunStuff', $folder).' item">
-							<label>Fun Stuff</label>
-							<ul>
-								<li style="width:33%">
-									<a href="../FunStuff/photos.php">Photos</a>
-									<div class="border"></div>
-								</li>
-								<li style="width:33%">
-									<a href="../FunStuff/videos.php">Videos</a>
-									<div class="border"></div>
-								</li>
-								<li style="width:33%">
-									<a href="../FunStuff/music.php">Music</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
+						';
+		}
+
+		echo '		</ul>
 				</div>
 			</div>';
 	}
@@ -157,11 +147,19 @@
 
 	}
 
-	function displayStatus($navFolder, $folder)
+	function submenuStatus($folder)
 	{
-		if ($navFolder === $folder)
+		if (strpos($_SERVER['PHP_SELF'], $folder))
 			return 'shown';
 		else
 			return 'hidden';
+	}
+
+	function isCurrent($file)
+	{
+		if (strpos($_SERVER['PHP_SELF'], $file))
+			return 'class="current" ';
+		else
+			return '';
 	}
 ?>

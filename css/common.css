@@ -62,7 +62,7 @@ body
 	margin: 0px;
 }
 
-#nav > li
+#nav > li /* affects just the top navigation items */
 {
 	display: inline-block;
 	padding: 0px 30px;
@@ -83,15 +83,15 @@ body
 	cursor: pointer;
 }
 
-#nav .item .border
+#nav .item > .border /* borders for just the top navigation items */
 {
-	/*border-right: 2px dotted green;
-	position: static;
+	border-right: 2px dotted green;
+	position: absolute;
 	top: 25%;
 	right: 0px;
 	height: 50%;
 
-	display: none;  until I can get this working... */
+	display: none; /* until I can get this working... */
 }
 
 
@@ -152,9 +152,35 @@ body
 	text-align: center;
 }
 
-#nav .item ul a
+#nav .item li a
 {
-	white-space: nowrap;
+	display: inline;
+	text-align: center;
+}
+
+#nav .item .border
+{
+	border-right: 2px dotted #b83838;
+	position: absolute;
+	top: 25%;
+	right: 0px;
+	height: 50%;
+}
+
+#nav .item ul li:first-child
+{
+	border-bottom-left-radius: 15px;
+}
+
+#nav .item ul li:last-child
+{
+	border-bottom-right-radius: 15px;
+	border-right: none;
+}
+
+#nav .shown label, #nav .current a
+{
+	border-bottom: 1px solid white;
 }
 
 #nav .hidden ul
@@ -170,38 +196,6 @@ body
 #nav .shown ul
 {
 	z-index: 5;
-}
-
-#nav .item li a
-{
-	display: inline;
-	text-align: center;
-}
-
-.item ul li
-{
-	position: relative;
-}
-
-.border
-{
-	border-right: 2px dotted #b83838;
-	position: absolute;
-	top: 25%;
-	right: 0px;
-	height: 50%;
-	z-index: 20;
-}
-
-#nav .item ul li:first-child
-{
-	border-bottom-left-radius: 15px;
-}
-
-#nav .item ul li:last-child
-{
-	border-bottom-right-radius: 15px;
-	border-right: none;
 }
 
 #content
