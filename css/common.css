@@ -94,7 +94,6 @@ body
 	display: none; /* until I can get this working... */
 }
 
-
 #nav .item:last-child
 {
 	border-right: none;
@@ -176,6 +175,11 @@ body
 {
 	border-bottom-right-radius: 15px;
 	border-right: none;
+}
+
+#nav .item ul li:last-child .border
+{
+	display: none;
 }
 
 #nav .shown label, #nav .current a
