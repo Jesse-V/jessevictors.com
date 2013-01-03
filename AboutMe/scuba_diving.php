@@ -4,7 +4,7 @@
 ?>
 
 			<div id="content">
-				
+				Coming soon! I need to gather images first.
 			</div>
 
 <?php

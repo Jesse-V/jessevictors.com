@@ -229,12 +229,26 @@ body
 {
 	float: left;
 	margin-right: 15px;
+	position: relative;
+	bottom: -10px;
 }
 
 .fixed-footer .feedback
 {
 	margin-right: 3px;
 	float: right;
+	position: relative;
 
-	display: none; /* until it actually does something */
+}
+
+.fixed-footer .feedback input[type=submit]
+{
+	background: #717171;
+	color: white;
+	font-size: 10pt;
+	font-family: 'Helvetica Neue', sans-serif;
+	padding: 6px 20px;
+	border-radius: 40px;
+	border: 1px solid #095B7E;
+	cursor: pointer;
 }

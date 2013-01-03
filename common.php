@@ -16,7 +16,7 @@
 				"folder" => "AboutMe",
 				"dropDown" => array(
 					"House && Family" => "house-family",
-					"Archery" => "archery",
+					"Beekeeping" => "beekeeping",
 					"Scuba diving" => "scuba_diving",
 					"Folding@home" => "FAH",
 					"Wikipedia" => "Wikipedia"
@@ -137,7 +137,10 @@
 			</div>
 
 			<div class="feedback">
-				<button>Feedback?</button>
+				<form action="../feedback/index.php" method="get">
+					<input type="hidden" name="page" value="index.php"/>
+					<input type="submit" value="Feedback?"/>
+				</form>
 			</div>
 		</div>
 
