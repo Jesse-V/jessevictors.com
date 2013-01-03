@@ -64,6 +64,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/'.$pageName.'.css">
 
 		<script src="https://apis.google.com/js/plusone.js"></script>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
 	</head>
 
 	<body>

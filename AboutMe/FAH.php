@@ -42,6 +42,8 @@
 				</p>
 			</div>
 
+			<!-- FAH on main page.png-->
+
 <?php
 	generateFooter();
 ?>

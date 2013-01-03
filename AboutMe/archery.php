@@ -4,7 +4,7 @@
 ?>
 
 			<div id="content">
-				
+				Page coming soon!
 			</div>
 
 <?php
