@@ -10,6 +10,7 @@
 
 				<form class="feedbackForm" action="accept.php" method="post">
 					<textarea name="feedback" placeholder="Comments? Technical problem? Suggestions for improvement? Please describe them here."></textarea>
+					<input type="hidden" name="page" value="<?php echo $_GET['page'] ?>">
 					<!--<label>Should this be public?</label>
 					<select name="public">
 						<option value="yes">Yes</option>

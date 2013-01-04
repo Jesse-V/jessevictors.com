@@ -138,7 +138,7 @@
 
 			<div class="feedback">
 				<form action="../feedback/index.php" method="get">
-					<input type="hidden" name="page" value="index.php"/>
+					<input type="hidden" name="page" value="'.$_SERVER['PHP_SELF'].'"/>
 					<input type="submit" value="Feedback?"/>
 				</form>
 			</div>
