@@ -1,5 +1,13 @@
 <?php
 	
+	require_once('databaseConnect.php');
+	
+	session_start();
+	submitNavigation();
+	updateTraffic();
+	updateUsers();
+	updateVisitLength();
+
 	function generateHeaders($pageName, $faviconURL)
 	{
 		$menu = array(
@@ -42,7 +50,6 @@
 				)
 			)
 		);
-
 
 		//there's odd tabbing here, but the user's HTML will have correct tabbing
 		echo 
@@ -120,6 +127,7 @@
 		echo '		</ul>
 				</div>
 			</div>';
+
 	}
 
 	function generateFooter()
@@ -149,6 +157,110 @@
 	</body>
 </html>';
 
+		echo session_id();
+	}
+
+	function submitNavigation()
+	{
+		if (isset($_SESSION['last page']))
+			$_SESSION['last page'] = $_SESSION['current page'];
+		else
+			$_SESSION['last page'] = "";
+		$_SESSION['current page'] = $_SERVER['PHP_SELF'];
+
+		$where = "WHERE fromPage='".$_SESSION['last page']."' AND toPage='".$_SESSION['current page']."'";
+
+		global $db;
+		$query = "SELECT * FROM navigationTracking ".$where;
+		
+		$result = $db->query($query);
+		if (!$result)
+			die("Failed to connect to database. ".$db->error);
+		$record = $result->fetch_assoc();
+
+		if (empty($record)) //test if data already exists
+			$query = "INSERT INTO `navigationTracking`(`fromPage`, `toPage`) VALUES ('".$_SESSION['last page']."','".$_SESSION['current page']."')";
+		else
+			$query = "UPDATE `navigationTracking` SET count=".($record['count'] + 1)." ".$where;
+
+
+
+		if (!$db->query($query))
+			die("Error: couldn't apply navigation tracking operations. ".$db->error);
+	}
+
+	function updateTraffic()
+	{
+		$now = getdate();
+		$date = $now['mon'].'/'.$now['mday'].'/'.$now['year'];
+		$where = "WHERE date='".$date."'";
+		
+		global $db;
+		$query = "SELECT * FROM traffic ".$where;
+		$result = $db->query($query);
+		if (!$result)
+			die("Failed to connect to database. ".$db->error);
+		$record = $result->fetch_assoc();
+
+		if (empty($record)) //test if data already exists
+			$query = "INSERT INTO `traffic`(`date`) VALUES ('".$date."')";
+		else
+			$query = "UPDATE `traffic` SET views=".($record['views'] + 1)." ".$where;
+
+		if (!$db->query($query))
+			die("Error: couldn't apply traffic data operation. ".$db->error);
+	}
+
+	function updateUsers()
+	{
+		$where = "WHERE ip='".$_SERVER['REMOTE_ADDR']."'";
+		$query = "SELECT * FROM users ".$where;
+		
+		global $db;
+		$result = $db->query($query);
+		if (!$result)
+			die("Failed to connect to database. ".$db->error);
+		$record = $result->fetch_assoc();
+
+		$now = getdate();
+		$time = $now['mon'].'/'.$now['mday'].'/'.$now['year'].' '.($now['hours'] - 2).':'.$now['minutes'].':'.$now['seconds'];
+
+		if (empty($record))
+			$query = "UPDATE `users` SET count=".($record['count'] + 1).", lastView='".$now."' ".$where;
+		else
+			$query = "INSERT INTO `users`(`IP`, `firstView`, `lastView`) VALUES ('".$_SERVER['REMOTE_ADDR']."','".$time."','".$time."')";
+
+		if (!$db->query($query))
+			die("Error: couldn't increase view count. ".$db->error);
+	}
+
+	function updateVisitLength()
+	{
+		if (!isset($_SESSION['visited pages']))
+			$_SESSION['visited pages'] = array($_SERVER['PHP_SELF']); //create the array
+		else if (!in_array($_SERVER['PHP_SELF'], $_SESSION['visited pages'])) //else if current page isn't already in the array
+			array_push($_SESSION['visited pages'], $_SERVER['PHP_SELF']); //add it into the array
+
+		$visitLength = count($_SESSION['visited pages']);
+		$where = "WHERE numOfPages=".$visitLength;
+		
+		global $db;
+		$query = "SELECT * FROM visitLength ".$where;
+		$result = $db->query($query);
+		if (!$result)
+			die("Failed to connect to database. ".$db->error);
+		$record = $result->fetch_assoc();
+		
+		if (empty($record))
+			$query = "INSERT INTO `visitLength`(`numOfPages`) VALUES (".$visitLength.");";
+		else
+			$query = "UPDATE `visitLength` SET count=".($record['count'] + 1)." ".$where.";";
+
+		if ($visitLength > 1) //user kept going, so remove count from last ending point
+			$query .= "UPDATE `visitLength` SET count=".($record['count'] - 1)." WHERE numOfPages=".($visitLength - 1);
+
+		if (!$db->multi_query($query))
+			die("Error: couldn't apply visit length operation. ".$db->error);
 	}
 
 	function submenuStatus($folder)
