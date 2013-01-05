@@ -157,7 +157,6 @@
 	</body>
 </html>';
 
-		echo session_id();
 	}
 
 	function submitNavigation()
