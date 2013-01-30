@@ -19,7 +19,7 @@ body
 	background-color: rgba(255, 255, 255, 0.0);
 	width: 70%;
 	min-height: 100%; /* the height of the webpage is a minimum of 80% the height of the browser window */
-	min-width: 720px;
+	min-width: 780px;
 	margin: 0px auto;
 }
 
@@ -209,6 +209,12 @@ body
 	border-bottom-left-radius: 30px;
 	padding: 70px 15px 10px;
 	font-family: "Times New Roman";
+}
+
+#content p
+{
+	margin: 10px;
+	text-indent: 30px;
 }
 
 .footer

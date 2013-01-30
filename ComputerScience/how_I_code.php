@@ -34,7 +34,8 @@
 				</div>
 
 				<p class="caption">
-					Which is more clear? The choice is clear.
+					Which is more clear? The choice is clear.<br>
+					In C++, standard iterators and <a href="http://en.wikipedia.org/wiki/Anonymous_function">lamda functions</a> make loops even cleaner.
 				</p>
 
 				<img class="xkcd" src="http://imgs.xkcd.com/comics/goto.png" alt="I could restructure the program's flow, or use one little goto. Eh, screw bad practice; how bad can it be? *compile* *velociraptor destruction*"/>

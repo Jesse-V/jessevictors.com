@@ -1,0 +1,17 @@
+.mint-screenshot img
+{
+	width: 100%;
+}
+
+.mint-screenshot .caption
+{
+	width: 95%;
+	text-align: center;
+	margin: 0px auto;
+	font-style: italic;
+}
+
+#content ul
+{
+	margin-left: 30px;
+}

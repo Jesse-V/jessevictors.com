@@ -1,12 +1,12 @@
 <?php
 	
-	require_once('databaseConnect.php');
+	//require_once('databaseConnect.php');
 	
 	session_start();
-	submitNavigation();
-	updateTraffic();
-	updateUsers();
-	updateVisitLength();
+	//submitNavigation();
+	//updateTraffic();
+	//updateUsers();
+	//updateVisitLength();
 
 	function generateHeaders($pageName, $faviconURL)
 	{
