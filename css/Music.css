@@ -1,0 +1,18 @@
+.youtube
+{
+	margin: 25px 0px 5px;
+}
+
+.youtube .label
+{
+	text-align: center;
+	font-size: 12pt;
+}
+
+.youtube .video
+{
+	width: 480px;
+	height: 270px;
+	margin: 0px auto;
+	display: block;
+}
