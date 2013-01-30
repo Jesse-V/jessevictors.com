@@ -47,6 +47,14 @@
 				<p>
 					Sublime is a brilliant text editor. It's free, and provides a number of unique features that set it far apart from anything in its class. I can open a whole folder in Sublime, which allows me to easily switch from file to file, or open individual ones as tabs. It offers automatic spell-check, syntax highlighting, auto-tabbing, intelligent auto-completion, and a wide variety of handy extensions. Yet it's most impressive feature is its support for multiple cursors. This allows me to type the same thing in multiple places at once. This is exceptionally handy as it makes repetitious changes really easy. I'm very surprised that expensive editors don't offer this. Sublime, a rather small program, runs circles around the editing capabilities of Netbeans, Eclipse, or Visual Studio.
 				</p>
+
+				<div class="sublime">
+					<img src="../images/Sublime.jpg" alt="Coding in Sublime">
+					<img src="../images/Sierpinski_Mountain.jpg" alt="Artificial 3D Mountain">
+					<div class="caption">
+						Here I use Sublime (left) to write a program in C++ and GLSL which uses OpenGL to create an artificial 3D mountain. Compiling in the command-line really is the way to go. :)
+					</div>
+				</div>
 			</div>
 
 <?php

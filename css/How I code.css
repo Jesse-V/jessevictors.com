@@ -38,3 +38,23 @@
 	margin: 30px auto;
 	display: block;
 }
+
+.sublime
+{
+	width: 100%;
+}
+
+.sublime img
+{
+	max-width: 95%;
+	margin: 0px auto 20px;
+	display: block;
+}
+
+.sublime .caption
+{
+	width: 85%;
+	margin: -15px auto 10px;
+	display: block;
+	font-size: 12pt;
+}
