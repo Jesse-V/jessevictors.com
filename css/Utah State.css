@@ -4,3 +4,8 @@ iframe
 	float: right;
 	margin: 10px 0px 10px 10px;
 }
+
+#content .address, #content .transcript p
+{
+	text-indent: 0px;
+}

@@ -1,12 +1,13 @@
 <?php
 	
-	//require_once('databaseConnect.php');
+	require_once('databaseConnect.php');
 	
 	session_start();
-	//submitNavigation();
-	//updateTraffic();
-	//updateUsers();
-	//updateVisitLength();
+	submitNavigation();
+	updateTraffic();
+	updateUsers();
+	updateVisitLength();
+
 
 	function generateHeaders($pageName, $faviconURL)
 	{
@@ -130,6 +131,8 @@
 
 	}
 
+
+
 	function generateFooter()
 	{
 		echo '
@@ -158,6 +161,8 @@
 </html>';
 
 	}
+
+
 
 	function submitNavigation()
 	{
@@ -188,6 +193,8 @@
 			die("Error: couldn't apply navigation tracking operations. ".$db->error);
 	}
 
+
+
 	function updateTraffic()
 	{
 		$now = getdate();
@@ -209,6 +216,8 @@
 		if (!$db->query($query))
 			die("Error: couldn't apply traffic data operation. ".$db->error);
 	}
+
+
 
 	function updateUsers()
 	{
@@ -232,6 +241,8 @@
 		if (!$db->query($query))
 			die("Error: couldn't increase view count. ".$db->error);
 	}
+
+
 
 	function updateVisitLength()
 	{
@@ -262,6 +273,8 @@
 			die("Error: couldn't apply visit length operation. ".$db->error);
 	}
 
+
+
 	function submenuStatus($folder)
 	{
 		if (strpos($_SERVER['PHP_SELF'], $folder))
@@ -269,6 +282,8 @@
 		else
 			return 'hidden';
 	}
+
+
 
 	function isCurrent($file)
 	{
