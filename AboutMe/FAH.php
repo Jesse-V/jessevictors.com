@@ -35,7 +35,7 @@
 							Dr. Pande granted me permission to edit and update the official F@h website. There are only a few other maintainers of this site, including Tim "7im" Braun, Bruce Borden (the main admin on the F@h forum), PantherX (a mod on the forum), and the main software developer, Joseph Coffland.
 						</li>
 						<li>
-							I help out the software developers, and one of my tasks is to concisely report bugs in the software. Only a dozen others do this. I've participated in discussions about new F@h features, and reported several serious problems with early versions of the software. For example <a href="https://fah-web.stanford.edu/projects/FAHClient/ticket/958">this</a> is one of the issues I reported.
+							I help out the software developers, and one of my tasks is to concisely report bugs in the software. Only a dozen others do this. I've participated in discussions about new F@h features, and reported several serious problems with early versions of the software. For example <a href="https://fah-web.stanford.edu/projects/FAHClient/ticket/963">this</a> is one of the issues I reported.
 						</li>
 					</ul>
 					It is so neat to be so near the front lines of medical research. I enjoy being kept up-to-date with where my efforts are going and the progress they're making towards cures. I don't know any way that I can accelerate research this much!
