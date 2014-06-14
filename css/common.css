@@ -1,53 +1,36 @@
+body
+{
+   margin: 0px;
+   background-color: #3882cd;
+}
+
 #header
 {
-    width: 100%;
-    height: 85px;
-    background-color: blue;
-    display: block;
+   width: 100%;
+   position: fixed;
 }
 
-#header img
+#header, #header img
 {
-    max-height: 100%;
+   height: 120px;
 }
 
-#header .left, #navigation, #header .right
+#header .wrapper
 {
-    height: 100%;
+   border-collapse: collapse;
+}
+
+#header .logo
+{
+   padding: 0px;
 }
 
 #header .left
 {
-    float: left;
-}
-
-#header #navigation
-{
-    width: 50%;
-    margin: 0px auto;
-}
-
-#header #navigation .menu
-{
-    margin: 15px 0px;
-}
-
-#header #navigation .item
-{
-    width: 20%;
-    float: left;
-    text-align: center;
+   float: left;
 }
 
 #header .right
 {
-    float: right;
-}
-
-#content
-{
-    display: block;
-    width: 90%;
-    margin: 0px auto;
-    background-color: gray;
+   float: right;
 }
