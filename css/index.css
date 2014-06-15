@@ -1,4 +1,68 @@
+#content #title
+{
+    font-weight: bold;
+    width: 75%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+#content .rightSide
+{
+    display: block;
+    float: right;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: gray;
+}
+
+#content .rightSide .section
+{
+    width: 90%;
+    margin: 0px auto;
+}
+
+#content .rightSide .section .subtitle
+{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+#content .rightSide .news .subtitle
+{
+    padding: 0px;
+}
+
+#content .rightSide .torStatus table
+{
+    width: 100%;
+    text-align: center;
+}
+#content .leftSize
+{
+
+}
+
+#content #xkcdAbstraction
+{
+    width: 340px;
+    float: right;
+}
+
+#content #xkcdRealProgrammers
+{
+    width: 700px;
+    margin: 0px auto;
+}
+
+#content img
+{
+    max-width: 100%;
+}
+
 #content .description
 {
     margin-left: 25px;
 }
+
