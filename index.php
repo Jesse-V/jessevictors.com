@@ -160,7 +160,7 @@
          JesseVictors.com
       </div>
       <p class="intro">
-         Welcome to JesseVictors.com! Here you can view a bit about my background, check out what I know, and follow my blog for the latest news. If you're an employer and looking to hire me, you can find my latest resume <a href="resources/resume.pdf">here</a>.
+         Welcome to JesseVictors.com! Here you can view a bit about my background, check out what I know, and follow my blog for the latest news. If you're an employer and looking to hire me, you can find my latest resume <a href="resources/resume.pdf">here</a>. I'm currently reworking my entire website, so things may be a little rough around the edges until I finish the job.
       </p>
       <p class="intro">
          While I have owned this website for close to a decade, over the last several years I have worked on expanding my presence online. A bit of Google-fu or clever searches on DuckDuckGo can find most of this, but for convenience I'll list my main web presence here:

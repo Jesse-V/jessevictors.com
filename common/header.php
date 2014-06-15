@@ -15,11 +15,11 @@
       <div id="header">
          <div id="barBackground"></div>
          <div class="left section">
+            <div class="logo logoLeft">
+               <img src="images/profile_pic2.4.png" alt="My profile picture"/>
+            </div>
             <table>
                <tr>
-                  <td class="logo">
-                     <img src="images/profile_pic2.4.png" alt="My profile picture"/>
-                  </td>
                   <td class="title">
                      <div class="wrapper">Jesse Victors</div>
                   </td>
@@ -49,11 +49,11 @@
                      <div class="wrapper">Blog</div>
                      <a href="blog.php"><span class="link"></span></a>
                   </td>
-                  <td class="logo">
-                     <img src="images/profile_pic_final.png" alt="Smaller profile picture"/>
-                  </td>
                </tr>
             </table>
+            <div class="logo logoRight">
+               <img src="images/profile_pic_final.png" alt="Smaller profile picture"/>
+            </div>
          </div>
       </div>
       <div id="contentWrap">
