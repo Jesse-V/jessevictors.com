@@ -3,7 +3,7 @@
    <head>
    <?php
       echo '
-      <title>'.$_TITLE_.' -JesseVictors.com</title>
+      <title>'.$_TITLE_.' - JesseVictors.com</title>
       <meta charset="UTF-8">
       <link rel="stylesheet" type="text/css" href="css/common.css">';
 
@@ -56,5 +56,5 @@
             </table>
          </div>
       </div>
-      <div id="content">
-
+      <div id="contentWrap">
+         <div id="content">

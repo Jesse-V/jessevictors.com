@@ -1,3 +1,4 @@
+            </div>
         </div>
         <?php
             foreach ($_JS_ as $jsSource)

@@ -123,8 +123,14 @@ body
    color: #3cfff7;
 }
 
+#contentWrap
+{
+   padding: 75px 128px 100px 128px;
+}
+
 #content
 {
-   padding: 75px 135px 100px 135px;
-   height: 1000px;
+   background: url('../images/content-bg.png') repeat-x, url('../images/white.jpg') repeat;
+   padding: 10px;
+   border-radius: 10px;
 }
