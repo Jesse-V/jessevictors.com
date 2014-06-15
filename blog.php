@@ -1,10 +1,10 @@
 <?php //opening HTML
-    $_TITLE_ = "Home";
-    $_STYLESHEETS_ = array("stylesheets/home.css");
+    $_TITLE_ = "Education";
+    $_STYLESHEETS_ = array("stylesheets/education.css");
     require_once('common/header.php');
 ?>
 
-   <p>Welcome!</p>
+   <p>Blog...</p>
 
 <?php
     $_JS_ = array();

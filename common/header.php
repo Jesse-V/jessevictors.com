@@ -31,23 +31,23 @@
                <tr>
                   <td class="item item1">
                      <div class="wrapper">Home</div>
-                     <a href="home.html"><span class="link"></span></a>
+                     <a href="index.php"><span class="link"></span></a>
                   </td>
                   <td class="item item2">
                      <div class="wrapper">Education</div>
-                     <a href="education.html"><span class="link"></span></a>
+                     <a href="education.php"><span class="link"></span></a>
                   </td>
                   <td class="item item3">
                      <div class="wrapper">Skills & Interests</div>
-                     <a href="skills.html"><span class="link"></span></a>
+                     <a href="skills.php"><span class="link"></span></a>
                   </td>
                   <td class="item item4">
                      <div class="wrapper">Recreation</div>
-                     <a href="recreation.html"><span class="link"></span></a>
+                     <a href="recreation.php"><span class="link"></span></a>
                   </td>
                   <td class="item item5">
                      <div class="wrapper">Blog</div>
-                     <a href="blog.html"><span class="link"></span></a>
+                     <a href="blog.php"><span class="link"></span></a>
                   </td>
                   <td class="logo">
                      <img src="images/profile_pic_final.png" alt="Smaller profile picture"/>
