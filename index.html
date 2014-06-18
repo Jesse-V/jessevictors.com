@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html id="top">
+   <head>
+      <title>JesseVictors.com</title>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" type="text/css" href="css/common.css"/>
+      <link rel="stylesheet" type="text/css" href="css/nonexistant.css" id="customCSS"/>
+   </head>
+   <body>
+      <div id="header">
+         <div id="barBackground"></div>
+         <div class="left section">
+            <div class="logo logoLeft">
+               <img src="images/profile_pic2.4.png" alt="My profile picture"/>
+            </div>
+            <table>
+               <tr>
+                  <td class="title">
+                     <div class="wrapper">Jesse Victors</div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div class="right section">
+            <table>
+               <tr>
+                  <td class="item item1">
+                     <div class="wrapper">Home</div>
+                     <a href="#/home"><span class="link"></span></a>
+                  </td>
+                  <td class="item item2">
+                     <div class="wrapper">Education</div>
+                     <a href="#/education"><span class="link"></span></a>
+                  </td>
+                  <td class="item item3">
+                     <div class="wrapper">Skills & Interests</div>
+                     <a href="#/skills"><span class="link"></span></a>
+                  </td>
+                  <td class="item item4">
+                     <div class="wrapper">Recreation</div>
+                     <a href="#/recreation"><span class="link"></span></a>
+                  </td>
+                  <td class="item item5">
+                     <div class="wrapper">Blog</div>
+                     <a href="#/blog"><span class="link"></span></a>
+                  </td>
+               </tr>
+            </table>
+            <div class="logo logoRight">
+               <img src="images/profile_pic_final.png" alt="Smaller profile picture"/>
+            </div>
+         </div>
+      </div>
+      <div id="contentWrap">
+         <div id="content">
+            <p>
+               This site requires Javascript. Please enable it.
+            </p>
+         </div>
+      </div>
+      <script src="js/jquery-2.1.1.js"></script>
+      <script type="text/javascript">
+         $("#header .item a").click(function() {
+            //https://stackoverflow.com/questions/1034621/get-current-url-with-javascript
+            var url = window.location.href;
+            var clickedObj = $(this)[0];
+
+            var label = $(clickedObj.parentElement)[0].children[0].innerHTML;
+            var href = clickedObj.href;
+            var page = href.substring(href.indexOf("/#/") + 3);
+
+            $("head title").html(label + " - JesseVictors.com");
+            $("head #customCSS").attr("href", "css/"+page+".css");
+
+            var jqxhr = $.ajax(page + ".php")
+               .done(function() {
+                  $("#content").html(jqxhr.responseText);
+               })
+               .fail(function() {
+                  console.log("ERROR");
+               });
+            //console.log(jqxhr);
+         });
+
+         $("#header .item1 a").click(); //initiate
+         console.log(window.location.href.indexOf("/#/")); //todo: expand
+      </script>
+   </body>
+</html>

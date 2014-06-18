@@ -31,23 +31,23 @@
                <tr>
                   <td class="item item1">
                      <div class="wrapper">Home</div>
-                     <a href="index.php"><span class="link"></span></a>
+                     <a href="#home"><span class="link"></span></a>
                   </td>
                   <td class="item item2">
                      <div class="wrapper">Education</div>
-                     <a href="education.php"><span class="link"></span></a>
+                     <a href="#education"><span class="link"></span></a>
                   </td>
                   <td class="item item3">
                      <div class="wrapper">Skills & Interests</div>
-                     <a href="skills.php"><span class="link"></span></a>
+                     <a href="#skills"><span class="link"></span></a>
                   </td>
                   <td class="item item4">
                      <div class="wrapper">Recreation</div>
-                     <a href="recreation.php"><span class="link"></span></a>
+                     <a href="#recreation"><span class="link"></span></a>
                   </td>
                   <td class="item item5">
                      <div class="wrapper">Blog</div>
-                     <a href="blog.php"><span class="link"></span></a>
+                     <a href="#blog"><span class="link"></span></a>
                   </td>
                </tr>
             </table>
@@ -58,3 +58,11 @@
       </div>
       <div id="contentWrap">
          <div id="content">
+         </div>
+      </div>
+         <?php
+            foreach ($_JS_ as $jsSource)
+               echo '<script src="'.$jsSource.'"></script>';
+         ?>
+   </body>
+</html>
