@@ -1,0 +1,44 @@
+#content .illustration
+{
+    margin: 10px;
+    margin-right: 0px;
+    float: right;
+}
+
+#content img
+{
+    width: 100%;
+}
+
+#content .illustration .caption
+{
+    font-size: 0.8em;
+    text-align: justify;
+    width: 95%;
+    margin: 0px auto;
+}
+
+#content #gotoComic
+{
+    float: none;
+    width: 650px;
+    margin: 10px auto;
+}
+
+#content #linuxLogos
+{
+    width: 270px;
+}
+
+#content #linuxLogos #tuxLogo
+{
+    width: 40%;
+    margin: 0px auto;
+    margin-top: 5px;
+}
+
+#content #regexComic
+{
+    width: 550px;
+    margin: 0px auto;
+}

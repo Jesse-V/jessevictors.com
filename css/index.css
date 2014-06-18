@@ -1,102 +1,98 @@
-#content .rightSide
+#content .sideBar
 {
-    display: block;
-    float: right;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    padding: 5px;
-    border-radius: 10px;
-    /*background: url('../images/content-bg.png') repeat-x, url('../images/white.jpg') repeat;*/
-    background-color: #ADD8E6;
+	display: block;
+	float: right;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	padding: 5px;
+	border-radius: 10px;
+	/*background: url('../images/content-bg.png') repeat-x, url('../images/white.jpg') repeat;*/
+	background-color: #ADD8E6;
 }
 
-#content .rightSide .section
+#content .sideBar .section
 {
-    width: 90%;
-    margin: 0px auto;
+	width: 90%;
+	margin: 0px auto;
 }
 
-#content .rightSide .section .subtitle
+#content .sideBar .section .subtitle
 {
-    text-align: center;
-    font-weight: bold;
-    padding-top: 20px;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 20px;
 }
 
-#content .rightSide .news .subtitle
+#content .sideBar .news .subtitle
 {
-    padding: 0px;
+	padding: 0px;
 }
 
-#content .rightSide .torStatus table
+#content .sideBar .torStatus table
 {
-    width: 100%;
-    text-align: center;
+	width: 100%;
+	text-align: center;
 }
 
 #content #xkcdAbstraction
 {
-    width: 340px;
-    margin-top: 20px;
+	width: 340px;
+	margin-top: 20px;
 }
 
-#content .leftSide #title
+#content .mainBody .stig
 {
-    font-weight: bold;
-    font-size: 2.0em;
-    margin: 0px 450px 30px 100px;
-    padding: 10px 0px;
-    border-bottom: 2px dotted green;
-    text-align: center;
+	font-style: italic;
+	text-align: center;
 }
 
-#content .leftSide .intro
+#content .mainBody .intro
 {
-    margin: 20px 375px 20px 15px;
+	margin: 20px 375px 20px 15px;
 }
 
-#content .leftSide div.title
+#content .mainBody div.title
 {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.25em;
-    margin: 25px 0px 3px 0px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.25em;
+	margin: 25px 0px 3px 0px;
 }
 
-#content .leftSide table
+#content .mainBody table
 {
-    border-spacing: 2px;
-    border-collapse: collapse;
+	border-spacing: 2px;
+	border-collapse: collapse;
 }
 
-#content .leftSide table td
+#content .mainBody table td
 {
-    background-color: #fffaf0 /*#FFFFE0 possible background: #e0ffff*/;
-    border: 1px solid #e6e6fa /*#BDB76B*/;
-    border-top: 1px solid #BDB76B;
-    border-bottom: 1px solid #BDB76B;
-    padding: 7px;
+	background-color: #fffaf0 /*#FFFFE0 possible background: #e0ffff*/;
+	border: 1px solid #e6e6fa /*#BDB76B*/;
+	border-top: 1px solid #BDB76B;
+	border-bottom: 1px solid #BDB76B;
+	padding: 7px;
 }
 
-#content .leftSide tr td:first-child
+#content .mainBody tr td:first-child
 {
-    width: 210px;
-    text-align: center;
+	width: 210px;
+	text-align: center;
 }
 
 #content #xkcdRealProgrammers
 {
-    width: 700px;
-    margin: 0px auto;
+	width: 700px;
+	margin: 0px auto;
 }
 
 #content img
 {
-    max-width: 100%;
+	max-width: 100%;
 }
 
 #content .description
 {
-    margin-left: 25px;
+	margin-left: 25px;
 }
 

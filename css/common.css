@@ -154,3 +154,13 @@ body
    position: relative;
    background-color: #F0F8FF;
 }
+
+#content #title
+{
+   font-weight: bold;
+   font-size: 2.0em;
+   margin: 0px 460px 0px 100px;
+   padding: 10px 0px;
+   border-bottom: 2px dotted green;
+   text-align: center;
+}

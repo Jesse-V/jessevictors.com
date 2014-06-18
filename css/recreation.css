@@ -1,0 +1,15 @@
+#content .subscription
+{
+    display: block;
+}
+
+#content .subscription .video
+{
+    float: left;
+    width: 420px;
+}
+
+#content .subscription .video .title
+{
+    font-style: italic;
+}

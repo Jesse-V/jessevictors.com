@@ -1,0 +1,45 @@
+#content .sideBar
+{
+   width: 350px;
+   display: block;
+   float: right;
+   margin-bottom: 10px;
+   margin-left: 10px;
+   padding: 5px;
+   border-radius: 10px;
+   /*background: url('../images/content-bg.png') repeat-x, url('../images/white.jpg') repeat;*/
+   background-color: #ADD8E6;
+   text-align: center;
+}
+
+#content .sideBar img
+{
+   width: 100%;
+}
+
+#content .mainBody
+{
+   height: 1400px;
+}
+
+#content #title
+{
+   margin-right: 470px;
+}
+
+#content #synopsis
+{
+   margin: 25px 20px;
+   margin-right: 0px;
+}
+
+#content #synopsis .title
+{
+   font-weight: bold;
+   font-style: italic;
+}
+
+#content #synopsis ul
+{
+   margin-top: 5px;
+}
