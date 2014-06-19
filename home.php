@@ -165,7 +165,7 @@
       <table>
          <tr>
             <td>Email<br>jvictors at jessevictors dot com</td>
-            <td>My main account. Send me a note!</td>
+            <td>My main account. Send me a note! I digitally sign all my outgoing emails with my 2048-bit RSA key, <a href="http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xAD97364FC20BEC80">0xc20bec80</a>.</td>
          </tr>
          <tr>
             <td>Github - <a href="https://github.com/Jesse-V">Jesse-V</a></td>

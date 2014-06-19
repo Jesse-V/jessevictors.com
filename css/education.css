@@ -19,7 +19,8 @@
 
 #content .mainBody
 {
-   height: 1400px;
+   height: 2700px;
+   text-indent: 20px;
 }
 
 #content #title
@@ -42,4 +43,40 @@
 #content #synopsis ul
 {
    margin-top: 5px;
+}
+
+#content #transcriptTitle
+{
+   text-align: center;
+   font-weight: bold;
+   font-style: italic;
+   font-size: 1.5em;
+   padding-top: 20px;
+}
+
+#content #transcript
+{
+   padding-left: 10px;
+   font-size: 0.85em;
+}
+
+#content #transcript .title
+{
+   font-weight: bold;
+   padding-top: 15px;
+}
+
+#content #transcript table
+{
+   width: 475px;
+   padding: 5px;
+   border: 1px dotted rgb(128, 128, 128);
+   border-radius: 10px;
+   margin: 5px;
+   margin-left: 45px;
+}
+
+#content #transcript table td
+{
+   text-align: center;
 }

@@ -15,7 +15,7 @@ $("#header .item a").click(function() {
          //transition to 90 degrees (on edge)
          contentObj.css({
             "transform": "perspective(700px) rotateY(90deg)",
-            "transition": "all 0.25s linear",
+            "transition": "all 0.2s linear",
             "transform-style": "preserve-3d"
          });
 
@@ -40,7 +40,7 @@ $("#header .item a").click(function() {
             setTimeout(function() {
                contentObj.css({
                   "transform": "perspective(700px) rotateY(360deg)",
-                  "transition": "all 0.25s linear",
+                  "transition": "all 0.2s linear",
                });
             }, 25);
 
@@ -66,13 +66,14 @@ $("#header .item a").click(function() {
    });
 });
 
+
 //initialize page load, look at URL
 //https://stackoverflow.com/questions/1034621/get-current-url-with-javascript
 var url = window.location.href;
 var i = url.indexOf("#/");
 if (i > 0)
 {
-   var page = i < 0 ? "home" : url.substring(i + 2);
+   var page = url.substring(i + 2);
    var jqxhr = $.ajax(page + ".php")
       .done(function() {
          $("head #customCSS").attr("href", "css/" + page + ".css");

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html id="top">
    <head>
-      <title>Home - JesseVictors.com</title>
+      <title>JesseVictors.com</title>
       <meta charset="UTF-8">
       <link rel="stylesheet" type="text/css" href="resources/flippant/flippant.css"/>
       <link rel="stylesheet" type="text/css" href="css/common.css"/>
