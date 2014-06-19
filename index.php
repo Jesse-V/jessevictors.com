@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html id="top">
    <head>
-   <?php
-      echo '
-      <title>'.$_TITLE_.' - JesseVictors.com</title>
+      <title>Home - JesseVictors.com</title>
       <meta charset="UTF-8">
-      <link rel="stylesheet" type="text/css" href="css/common.css">';
-
-      foreach ($_STYLESHEETS_ as $sheet)
-         echo '<link rel="stylesheet" type="text/css" href="'.$sheet.'" />';
-   ?>
+      <link rel="stylesheet" type="text/css" href="resources/flippant/flippant.css"/>
+      <link rel="stylesheet" type="text/css" href="css/common.css"/>
+      <link rel="stylesheet" type="text/css" href="css/home.css" id="customCSS"/>
+      <script src="resources/js/jquery-1.11.1.min.js"></script>
+      <script src="resources/js/jquery-ui-1.10.4.custom.min.js"></script>
    </head>
    <body>
       <div id="header">
@@ -31,23 +29,23 @@
                <tr>
                   <td class="item item1">
                      <div class="wrapper">Home</div>
-                     <a href="#home"><span class="link"></span></a>
+                     <a href="#/home"><span class="link"></span></a>
                   </td>
                   <td class="item item2">
                      <div class="wrapper">Education</div>
-                     <a href="#education"><span class="link"></span></a>
+                     <a href="#/education"><span class="link"></span></a>
                   </td>
                   <td class="item item3">
                      <div class="wrapper">Skills & Interests</div>
-                     <a href="#skills"><span class="link"></span></a>
+                     <a href="#/skills"><span class="link"></span></a>
                   </td>
                   <td class="item item4">
                      <div class="wrapper">Recreation</div>
-                     <a href="#recreation"><span class="link"></span></a>
+                     <a href="#/recreation"><span class="link"></span></a>
                   </td>
                   <td class="item item5">
                      <div class="wrapper">Blog</div>
-                     <a href="#blog"><span class="link"></span></a>
+                     <a href="#/blog"><span class="link"></span></a>
                   </td>
                </tr>
             </table>
@@ -58,11 +56,11 @@
       </div>
       <div id="contentWrap">
          <div id="content">
+            <?php
+               require_once("home.php");
+            ?>
          </div>
       </div>
-         <?php
-            foreach ($_JS_ as $jsSource)
-               echo '<script src="'.$jsSource.'"></script>';
-         ?>
+      <script src="js/index.js"></script>
    </body>
 </html>

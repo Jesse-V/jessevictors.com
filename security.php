@@ -8,4 +8,4 @@
    Over the years there have been many things that have caught my eye.
 
    The security field has really exploded over the last twelve months in wake of the revelations that government agencies are spying on its citizens, and not just in the United States. More than that, computers -- a powerful supplement of the human brain -- will almost certainly continue to increase in popularly and an ever-growing volume information is continually being stored on them. As this growth continues, so does the attack surface and incentive for miscreants to steal information. Those who can help defend systems against these users are valuable and are an essential part of any business.
- \</p>
+</p>
