@@ -1,22 +1,41 @@
 
 $("#header .item a").click(function() {
-   var clickedObj = $(this)[0];
-   var label = $(clickedObj.parentElement)[0].children[0].innerHTML;
+   var clickedObj   = $(this)[0];
+   var labelObj     = $(clickedObj.parentElement)[0].children[0].children[0];
    var href = clickedObj.href;
-   var page = href.substring(href.indexOf("#/") + 2);
 
-   $("head title").html(label + " - JesseVictors.com");
+   //remove selected flag from all menu items
+   $("#header .item .label span.selected").each(function() {
+      $(this).removeClass("selected");
+   });
 
+   $(labelObj).addClass('selected');
+   $("head title").html(labelObj.innerHTML + " - JesseVictors.com");
+   navigate(href.substring(href.indexOf("#/") + 2));
+});
+
+
+
+function navigate(page)
+{
    var jqxhr = $.ajax(page + ".php")
       .done(function() {
          var contentObj = $("#content");
          var contentEl  = document.getElementById("content");
 
+         contentEl.classList.add("transform1");
+
          //transition to 90 degrees (on edge)
          contentObj.css({
             "transform": "perspective(700px) rotateY(90deg)",
-            "transition": "all 0.2s linear",
-            "transform-style": "preserve-3d"
+            "-webkit-transform": "perspective(700px) rotateY(90deg)",
+            "-moz-transform": "perspective(700px) rotateY(90deg)",
+
+            "transition": "all 0.2s",
+            "-o-transition": "all 0.2s",
+            "-ms-transition": "all 0.2s",
+            "-moz-transition": "all 0.2s",
+            "-webkit-transition": "all 0.2s"
          });
 
          contentEl.addEventListener("webkitTransitionEnd", switchPage, true);
@@ -32,15 +51,29 @@ $("#header .item a").click(function() {
             contentObj.html(jqxhr.responseText);
             $("head #customCSS").attr("href", "css/" + page + ".css");
             contentObj.css({
-               "transition": "all 0s",
                "transform": "perspective(700px) rotateY(270deg)",
+               "-webkit-transform": "perspective(700px) rotateY(270deg)",
+               "-moz-transform": "perspective(700px) rotateY(270deg)",
+
+               "transition": "all 0s",
+               "-o-transition": "all 0s",
+               "-ms-transition": "all 0s",
+               "-moz-transition": "all 0s",
+               "-webkit-transition": "all 0s"
             });
 
             //complete remaining rotation
             setTimeout(function() {
                contentObj.css({
                   "transform": "perspective(700px) rotateY(360deg)",
-                  "transition": "all 0.2s linear",
+                  "-webkit-transform": "perspective(700px) rotateY(360deg)",
+                  "-moz-transform": "perspective(700px) rotateY(360deg)",
+
+                  "transition": "all 0.2s",
+                  "-o-transition": "all 0.2s",
+                  "-ms-transition": "all 0.2s",
+                  "-moz-transition": "all 0.2s",
+                  "-webkit-transition": "all 0.2s"
                });
             }, 25);
 
@@ -56,7 +89,14 @@ $("#header .item a").click(function() {
                //finalize and reset rotation
                contentObj.css({
                   "transform": "perspective(700px) rotateY(0deg)",
-                  "transition": "all 0s linear",
+                  "-webkit-transform": "perspective(700px) rotateY(0deg)",
+                  "-moz-transform": "perspective(700px) rotateY(0deg)",
+
+                  "transition": "all 0s",
+                  "-o-transition": "all 0s",
+                  "-ms-transition": "all 0s",
+                  "-moz-transition": "all 0s",
+                  "-webkit-transition": "all 0s"
                });
             }
          }
@@ -64,7 +104,8 @@ $("#header .item a").click(function() {
       .fail(function() {
          console.log("There was an error processing your request; the page you requested does not exist.");
    });
-});
+}
+
 
 
 //initialize page load, look at URL
@@ -82,12 +123,11 @@ if (i > 0)
    );
 }
 
-
 //page load animation, uses JQuery UI
 $("#header").hide();
 $("#content").hide();
 setTimeout(function() {
-   $("#header").show("blind", {}, 500);
+   $("#header").show("scale", {}, 500);
    $("#content").show("clip", {}, 750); //blind, clip, fold, scale
 }, 500);
 

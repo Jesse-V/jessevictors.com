@@ -28,23 +28,23 @@
             <table>
                <tr>
                   <td class="item item1">
-                     <div class="wrapper">Home</div>
+                     <div class="label"><span class="wrapper selected">Home</span></div>
                      <a href="#/home"><span class="link"></span></a>
                   </td>
                   <td class="item item2">
-                     <div class="wrapper">Education</div>
+                     <div class="label"><span class="wrapper">Education</span></div>
                      <a href="#/education"><span class="link"></span></a>
                   </td>
                   <td class="item item3">
-                     <div class="wrapper">Skills & Interests</div>
+                     <div class="label"><span class="wrapper">Skills & Interests</span></div>
                      <a href="#/skills"><span class="link"></span></a>
                   </td>
                   <td class="item item4">
-                     <div class="wrapper">Recreation</div>
+                     <div class="label"><span class="wrapper">Recreation</span></div>
                      <a href="#/recreation"><span class="link"></span></a>
                   </td>
                   <td class="item item5">
-                     <div class="wrapper">Blog</div>
+                     <div class="label"><span class="wrapper">Blog</span></div>
                      <a href="#/blog"><span class="link"></span></a>
                   </td>
                </tr>

@@ -155,10 +155,10 @@
       Some say that he invented the curtain, and that his voice can only be heard by cats.<br>All we know is, he's not the Stig, he's the Stig's Alaskan cousin!
    </p>
    <p class="intro">
-      Welcome to my website! Here you can view a bit about my background, check out what I know, and follow my blog for the latest news. If you're an employer and looking to hire me, you can find my latest resume <a href="resources/resume.pdf">here</a>. I'm currently reworking my entire website, so things may be a little rough around the edges until I finish the job.
+      Welcome to my website! Here you can view a bit about my background, check out what I know, and follow my blog for the latest news. I'm a computer scientist, security consultant, and Linux administrator by day and Redditor by night. If you're an employer and looking to hire me, you can find my latest resume <a href="resources/resume.pdf">here</a>.
    </p>
    <p class="intro">
-      While I have owned this website for close to a decade, over the last several years I have worked on expanding my presence online. A bit of Google-fu or clever searches on DuckDuckGo can find most of this, but for convenience I'll list my main web presence here:
+      I'm currently reworking my entire website, so things may be a little rough around the edges until I finish the job. While I have owned this website for close to a decade, over the last several years I have worked on expanding my presence online. A bit of Google-fu or clever searches on DuckDuckGo can find most of this, but for convenience I'll list my main web presence here:
    </p>
    <p>
       <div class="title">Work</div>
@@ -178,6 +178,10 @@
          <tr>
             <td>Launchpad - <a href="https://launchpad.net/~jvictors">~jvictors</a></td>
             <td>I package a few Linux programs, mainly from my Github projects. I support Debian through .deb files, and *buntu/Mint through a PPA.</td>
+         </tr>
+         <tr>
+            <td>Websites - this site and <a href="https://www.alaskawildflowerhoney.com/">AlaskaWildflowerHoney.com</a></td>
+            <td>I have authored several websites besides this one. The most notable of which is <a href="https://www.alaskawildflowerhoney.com/">AlaskaWildflowerHoney.com</a>. My father runs a large beekeeping operation in Alaska, and through this website users can purchase honeybees and beekeeping supplies and purchase them with a credit card. The website code is <a href="https://github.com/Jesse-V/AlaskaWildflowerHoney.com">on Github</a>.</td>
          </tr>
          <tr>
             <td>Folding@home</td>

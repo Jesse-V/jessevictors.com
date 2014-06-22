@@ -1,15 +1,67 @@
+
+#content .sideBar
+{
+   width: 250px;
+   display: block;
+   float: right;
+   margin-bottom: 10px;
+   margin-left: 10px;
+   padding: 10px;
+   border-radius: 10px;
+   background-color: #ADD8E6;
+}
+
+#content .sideBar .images
+{
+   width: 90%;
+   margin: 0px auto;
+}
+
+#content .sideBar img
+{
+   width: 100%;
+   margin-bottom: 10px;
+}
+
+#content .sideBar .caption
+{
+   text-align: justify;
+   font-size: 0.9em;
+}
+
+#content .videos
+{
+   width: 860px;
+   margin: 20px auto;
+}
+
+#content .videos .seaNanners #barrelVid
+{
+   float: none;
+   margin-left: auto;
+   margin-right: auto;
+}
+
 #content .subscription
 {
-    display: block;
+   display: block;
+   margin: 20px 0px;
 }
 
 #content .subscription .video
 {
-    float: left;
-    width: 420px;
+   float: left;
+   width: 420px;
+   margin: 10px 5px;
+}
+
+#content .subscription .video .caption
+{
+   font-size: 0.8em;
+   text-align: justify;
 }
 
 #content .subscription .video .title
 {
-    font-style: italic;
+   font-style: italic;
 }

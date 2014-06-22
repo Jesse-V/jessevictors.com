@@ -91,7 +91,7 @@ body
    padding-left: 10px;
 }
 
-#header .wrapper
+#header .label
 {
    font-family: 'carme', sans-serif;
    margin: 7px 0px;
@@ -107,37 +107,37 @@ body
    left: 0;
 }
 
-#header .right .wrapper
+#header .right .label
 {
    border-right: 2px dotted green;
 }
 
-#header .right .item5 .wrapper
+#header .right .item5 .label
 {
    border: none;
 }
 
-#header .right .item1:hover
+#header .right .item1:hover, #header .item1 .label span.selected
 {
    color: #8c8cff;
 }
 
-#header .right .item2:hover
+#header .right .item2:hover, #header .item2 .label span.selected
 {
    color: #ff6767;
 }
 
-#header .right .item3:hover
+#header .right .item3:hover, #header .item3 .label span.selected
 {
    color: #9aff8c;
 }
 
-#header .right .item4:hover
+#header .right .item4:hover, #header .item4 .label span.selected
 {
    color: #ffa13c;
 }
 
-#header .right .item5:hover
+#header .right .item5:hover, #header .item5 .label span.selected
 {
    color: #3cfff7;
 }

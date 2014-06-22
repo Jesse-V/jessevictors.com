@@ -23,6 +23,11 @@
    text-indent: 20px;
 }
 
+#content .mainBody p
+{
+   margin: 12px 0px;
+}
+
 #content #title
 {
    margin-right: 470px;
