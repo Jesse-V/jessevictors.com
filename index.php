@@ -3,8 +3,9 @@
    <head>
       <title>JesseVictors.com</title>
       <meta charset="UTF-8">
-      <link rel="stylesheet" type="text/css" href="resources/flippant/flippant.css"/>
+      <link type="text/css" rel="stylesheet" href="resources/galleria/themes/classic/galleria.classic.css">
       <link rel="stylesheet" type="text/css" href="css/common.css"/>
+      <link rel="stylesheet" type="text/css" href="css/fancyHR.css"/>
       <link rel="stylesheet" type="text/css" href="css/home.css" id="customCSS"/>
       <script src="resources/js/jquery-1.11.1.min.js"></script>
       <script src="resources/js/jquery-ui-1.10.4.custom.min.js"></script>

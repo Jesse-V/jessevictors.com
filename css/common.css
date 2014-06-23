@@ -153,6 +153,8 @@ body
    border-radius: 15px;
    position: relative;
    background-color: #F0F8FF;
+   min-width: 770px;
+   font-family: Georgia, "Times New Roman", serif;
 }
 
 #content #title

@@ -1,10 +1,14 @@
 <div class="sideBar">
    <img src="images/OldMain.jpg" alt="Old Main"/>
+   <img src="images/OldMainFromBNR.jpg" alt="Old Main from BNR"/>
    <p>
       Old Main, one of the university's oldest and most iconic buildings. The Department of Computer Science is on the fourth floor.
    </p>
-   <img src="images/OldMainFromBNR.jpg" alt="Old Main from BNR"/>
-   <!-- TODO: expand the sitebar with more images -->
+   <img src="images/Logan_Canyon.jpg" alt="Logan Canyon"/>
+   <p>
+      Logan Canyon
+   </p>
+   <img src="images/unusual_photos/DSC03274.JPG" alt="Logan Canyon"/>
 </div>
 <div class="mainBody">
    <div id="title">Education</div>

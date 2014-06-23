@@ -1,13 +1,19 @@
 
+#content
+{
+   height: 3500px;
+}
+
 #content .sideBar
 {
    width: 250px;
    display: block;
    float: right;
-   margin-bottom: 10px;
-   margin-left: 10px;
+   margin: 8px;
+   /*margin-bottom: 10px;
+   margin-left: 10px;*/
    padding: 10px;
-   border-radius: 10px;
+   border-radius: 15px;
    background-color: #ADD8E6;
 }
 
@@ -23,10 +29,46 @@
    margin-bottom: 10px;
 }
 
-#content .sideBar .caption
+#content .caption
 {
    text-align: justify;
    font-size: 0.9em;
+}
+
+#content .mainBody p
+{
+   text-indent: 20px;
+}
+
+#content .mainBody .intro
+{
+   height: 277px;
+}
+
+#content .mainBody .galleria
+{
+   width: 700px;
+   height: 500px;
+   background: #000;
+   margin: 0px auto;
+}
+
+#content .mainBody .illustration
+{
+   width: 150px;
+   float: right;
+   margin: 10px;
+   margin-top: -5px;
+}
+
+#content .mainBody .illustration img
+{
+   width: 100%;
+}
+
+#content .mainBody #seldoviaPics
+{
+   width: 300px;
 }
 
 #content .videos

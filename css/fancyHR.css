@@ -1,0 +1,22 @@
+
+/* http://css-tricks.com/examples/hrs/ */
+hr.fancy {
+    height: 30px;
+    border-style: solid;
+    border-color: green;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    margin-top: 25px;
+    margin-bottom: -15px;
+}
+
+hr.fancy:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: green;
+    border-width: 0 0 2px 0;
+    border-radius: 20px;
+}

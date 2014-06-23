@@ -1,0 +1,48 @@
+
+#content table, #content tr
+{
+    vertical-align: top;
+    border-collapse: collapse;
+    border: none;
+}
+
+#mainBody
+{
+    padding-right: 20px;
+}
+
+#mainBody .title
+{
+    font-style: italic;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+#mainBody .date
+{
+    font-style: italic;
+    font-size: 0.8em;
+    padding-left: 20px;
+}
+
+#sideBar
+{
+   width: 350px;
+   padding: 5px;
+   border-radius: 10px;
+   background-color: #ADD8E6;
+}
+
+#sideBar .title
+{
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#sideBar tr td:first-child
+{
+    width: 100px;
+    text-align: center;
+}
