@@ -1,71 +1,67 @@
-<div class="sideBar">
-   <p><b>This news bar is a work-in-progress!</b></p>
+<?php
+   try
+   {
+      $db = new PDO("sqlite:_private/sqlite.db");
+   }
+   catch (PDOException $e)
+   {
+      echo $e->getMessage();
+   }
 
+   date_default_timezone_set("America/Anchorage");
+?>
+
+<div class="sideBar">
    <div class="news section">
       <div class="subtitle">Latest News</div>
-      <div class="item">News piece 1</div>
-      <div class="item">News piece 2</div>
-      <div class="item">News piece 3</div>
+      <?php
+         $newsList = $db->query("SELECT * FROM News");
+         foreach ($newsList as $new)
+         {
+            $title = $new['title'];
+            if (strlen($title) > 28)
+               $title = substr($title, 0, 25)."...";
+            echo '<div class="item">'.$new['date'].': '.$title.'</div>';
+         }
+      ?>
    </div>
    <div class="latestCommits section">
       <div class="subtitle">Github Activity</div>
-      <div class="commit">pushed "main content for homepage" to Github</div>
-      <div class="commit">pushed "placeholder pages" to Github</div>
-      <div class="commit">pushed "organized header and ..." to Github</div>
-      <div class="commit">pushed "header color adjustments" to Github</div>
-      <div class="commit">pushed "finished building header" to Github</div>
-      <div class="commit">pushed "layout fixes" to Github</div>
+      <?php
+         $commitList = $db->query("SELECT * FROM Commits");
+         foreach ($commitList as $comm)
+         {
+            $title = $comm['title'];
+            if (strlen($title) > 28)
+               $title = substr($title, 0, 25)."...";
+            echo '<div class="commit">'.$comm['date'].': '.$title.'</div>';
+         }
+      ?>
    </div>
    <div class="torStatus section">
-      <div class="subtitle">Tor Status</div>
-      <table>
+      <div class="subtitle">
+         Tor Status<br><span class="subsubtitle">as of <?php echo date('i'); ?> minutes ago</span>
+      </div>
+      <table class="bandwidthInfo">
          <tr>
             <th>Relay</th>
             <th>Uptime</th>
             <th>Bandwidth</th>
          </tr>
-         <tr>
-            <td>
-               <a href="https://globe.torproject.org/#/relay/BFA0E9F3E6F446BB538877D89CD57DB1362E799C">UtahState0</a>
-            </td>
-            <td>8d 10hr</td>
-            <td>3.19 MB/sec</td>
-         </tr>
-         <tr>
-            <td>
-               <div class="status"><a href="https://globe.torproject.org/#/relay/40DF7E2EDE33DFCB126D241BD1907EED70925498">UtahState1</a>
-            </td>
-            <td>8d 10hr</td>
-            <td>4.88 MB/sec</td>
-         </tr>
-         <tr>
-            <td>
-               <div class="status"><a href="https://globe.torproject.org/#/relay/4B8C39A51FD0BE3F91E0A1C3F5AA67A17EC56EB7">UtahState2</a>
-            </td>
-            <td>8d 10hr</td>
-            <td>4.10 MB/sec</td>
-         </tr>
-         <tr>
-            <td>
-               <div class="status"><a href="https://globe.torproject.org/#/relay/C6DC982A0FE54BC91AF32629F33711D5C12C5546">UtahState3</a>
-            </td>
-            <td>8d 10hr</td>
-            <td>3.67 MB/sec</td>
-         </tr>
-         <tr>
-            <td>
-               <div class="status"><a href="https://globe.torproject.org/#/relay/2FC06226AE152FBAB7620BB107CDEF0E70876A7B">UtahStateExit</a>
-            </td>
-            <td>8d 10hr</td>
-            <td>5.36 MB/sec</td>
-         </tr>
-         <tr>
-            <td>
-               <div class="status"><a href="https://globe.torproject.org/#/relay/1946F5E4748B069D3B989B5AF50C7DDD3AC61859">UtahStateExit2</a>
-            </td>
-            <td>8d 10hr</td>
-            <td>6.98 MB/sec</td>
-         </tr>
+         <?php
+            $relayList = $db->query("SELECT * FROM TorRelays");
+            foreach ($relayList as $relay)
+            {
+               echo '
+               <tr>
+                  <td>
+                     <a href="https://globe.torproject.org/#/relay/'.$relay['fingerprint'].'">'.$relay['name'].'</a>
+                  </td>
+                  <td>8d 10hr</td>
+                  <td>'.($relay['bandwidth'] / 1000000.0).' MB/sec</td>
+               </tr>';
+            }
+         ?>
          <tr>
             <td>
                <div class="status"><a href="https://globe.torproject.org/#/bridge/442EBC25DABEC80363B12580315B8DDDD083BB1A">AlaskaBridge</a>
@@ -74,74 +70,44 @@
             <td>54.04 kB/sec</td>
          </tr>
       </table>
-      <table>
-         <tr>
-            <td>Tor users today</td>
-            <td>2,459,127</td>
-         </tr>
-         <tr>
-            <td>Relays</td>
-            <td>5,242</td>
-         </tr>
-         <tr>
-            <td>Bridges</td>
-            <td>3,212</td>
-         </tr>
-      </table>
+      <div class="torStatImages">
+         <img src="https://metrics.torproject.org/userstats-relay-country.png" alt="Tor users graph">
+         <img src="https://metrics.torproject.org/networksize.png" alt="Tor network graph">
+      </div>
       <div class="news">
-         <div class="item">06/11: <a href="https://blog.torproject.org/blog/tor-weekly-news-%E2%80%94-june-11th-2014">Tor Weekly News - June 11th, 2014</a></div>
-         <div class="item">06/10: <a href="https://blog.torproject.org/blog/tails-101-out">Tails 1.0.1 is out</a></div>
-         <div class="item">06/09: <a href="https://blog.torproject.org/blog/tor-browser-362-released">Tor Browser 3.6.2 is released</a></div>
+         <?php
+            $page = file_get_contents('https://blog.torproject.org/blog/feed');
+            preg_match_all('/\<title\>.+\<\/title\>/', $page, $titleList);
+            preg_match_all('/\<link\>.+\<\/link\>/', $page, $linkList);
+
+            for ($key = 1; $key <= 4; $key++)
+            {
+               $link  = substr($linkList[0][$key],  6);
+               $link  = substr($link, 0, strpos($link, "</link>"));
+               $title = substr($titleList[0][$key], 7);
+               if (strlen($title) > 38)
+                  $title = substr($title, 0, 35)."...";
+               echo '<div class="item"><a href="'.$link.'">'.$title.'</a></div>';
+            }
+         ?>
       </div>
    </div>
    <div class="fah section">
-      <div class="subtitle">Folding@home Productivity</div>
-      <div class="status">24,523 points/day</div>
-      <div class="news">
-         <div class="item">06/02: Webinar tomorrow - a chance for Q&A</div>
-         <div class="item">05/29: NaCl client points change</div>
-         <div class="item">05/23: Webinar June 3, 2014: Next Steps...</div>
-      </div>
-   </div>
-   <div class="crypto section">
-      <div class="subtitle">Cryptocurrency</div>
-      <div class="coin">
-         <div class="title">Bitcoin (...77g)</div>
+      <div class="subtitle">Folding@home Status</div>
+      <div class="status">
          <table>
-            <tr class="price">
-               <td>USD/BTC</td>
-               <td>623.43</td>
+            <tr>
+               <td>My productivity</td>
+               <td>49,467 points/day</td>
             </tr>
-            <tr class="balance">
-               <td>Balance</td>
-               <td>0.23 BTC</td>
-            </tr>
-            <tr class="volume">
-               <td>Total Volume</td>
-               <td>0.32 BTC</td>
+            <tr>
+               <td>F@h overall</td>
+               <td>41.588 petaFLOPS</td>
             </tr>
          </table>
-      </div>
-      <div class="coin">
-         <div class="title">Curecoin: (...6jy)</div>
-         <table>
-            <tr class="price">
-               <td>USD/CUR</td>
-               <td>0.005</td>
-            </tr>
-            <tr class="price">
-               <td>USD/BTC</td>
-               <td>0.0007</td>
-            </tr>
-            <tr class="balance">
-               <td>Balance</td>
-               <td>90 CUR</td>
-            </tr>
-            <tr class="volume">
-               <td>Total Volume</td>
-               <td>120 CUR</td>
-            </tr>
-         </table>
+         <p>
+            F@h news and science updates: <a href="http://folding.stanford.edu/home/blog">here</a>
+         </p>
       </div>
    </div>
    <div id="xkcdAbstraction">
@@ -158,7 +124,7 @@
       Welcome to my website! Here you can view a bit about my background, check out what I know, and follow my blog for the latest news. I'm a graduate student working in computer and network security at Utah State University, I have a Bachelor's in computer science, and I'm a Linux user. If you're an employer and looking to hire me, you can find my latest resume <a href="resources/resume.pdf">here</a>.
    </p>
    <p class="intro">
-      I'm currently reworking my entire website, so things may be a little rough around the edges until I finish the job. While I have owned this website for close to a decade, over the last several years I have worked on expanding my presence online. A bit of Google-fu or clever searches on DuckDuckGo can find most of this, but for convenience I'll list my main web presence here:
+      While I have owned this website for close to a decade, over the last several years I have worked on expanding my presence online. A bit of Google-fu or clever searches on DuckDuckGo can find most of this, but for convenience I'll list my main web presence here:
    </p>
    <p>
       <div class="title">Work</div>

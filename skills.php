@@ -21,7 +21,7 @@
             I'm quite proud of my large software projects, which include <a href="https://github.com/Jesse-V/Folding-Atomata">Folding Atomata</a>, a 3D protein viewer for Folding@home; and <a href="https://github.com/Jesse-V/Multibrot-3D/tree/master/src/OpenGL%20renderer">Multibrot 3D</a>, a colorful rendering of the Multibrot 3D fractal. Their source code demonstrates that I carefully organized the OpenGL rendering code, implemented focused responsibility to each class, and minimized inter-class dependencies. I also follow the best practice of writing code so that it is readable and maintainable by others.
          </p>
          <p>
-            My preferred language is C++11, but I also know Java, Bash, PHP, Javascript, HTML5, CSS3, Lua, Postscript, Prolog, and several other languages. I'm familiar with Android, OpenGL, MySQL, and Node.js. For revision control, I typically use Git/Github for my projects, but I've also used Subversion on a few occasions.
+            My preferred language is C++11, but I also know Java, Bash, PHP, Javascript, HTML5, CSS3, and several other languages to a lesser degree including MIPS Assembly, Lua, Postscript, Prolog, and QBasic. I'm familiar with Android, OpenGL, MySQL, and SQLite. For revision control, I typically use Git/Github for my projects, but I've also used Subversion on a few occasions.
          </p>
          <div class="illustration" id="sublime">
             <img src="images/sublime_coding.png" alt="Sublime Text 2 editing the Folding Atomata source code."/>

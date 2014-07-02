@@ -41,8 +41,13 @@
     font-size: 1.2em;
 }
 
+#sideBar table
+{
+    width: 100%;
+}
+
 #sideBar tr td:first-child
 {
-    width: 100px;
+    width: 35%;
     text-align: center;
 }

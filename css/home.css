@@ -1,99 +1,132 @@
 #content .sideBar
 {
-	display: block;
-	float: right;
-	margin-bottom: 10px;
-	margin-left: 10px;
-	padding: 5px;
-	border-radius: 10px;
-	/*background: url('../images/content-bg.png') repeat-x, url('../images/white.jpg') repeat;*/
-	background-color: #ADD8E6;
+   display: block;
+   float: right;
+   margin-bottom: 10px;
+   margin-left: 10px;
+   padding: 5px;
+   border-radius: 10px;
+   /*background: url('../images/content-bg.png') repeat-x, url('../images/white.jpg') repeat;*/
+   background-color: #ADD8E6;
+   width: 350px;
 }
 
-#content .sideBar .section
+#content .sideBar .section, .torStatus .news
 {
-	width: 90%;
-	margin: 0px auto;
+   width: 90%;
+   margin: 0px auto;
 }
 
 #content .sideBar .section .subtitle
 {
-	text-align: center;
-	font-weight: bold;
-	padding-top: 20px;
+   text-align: center;
+   font-weight: bold;
+   padding-top: 20px;
 }
 
 #content .sideBar .news .subtitle
 {
-	padding: 0px;
+   padding: 0px;
 }
 
-#content .sideBar .torStatus table
+#content .sideBar .torStatus
 {
-	width: 100%;
-	text-align: center;
+   width: 100%;
+}
+
+#content .sideBar .torStatus .subtitle
+{
+   line-height: 0.8em;
+}
+
+#content .sideBar .torStatus .subsubtitle
+{
+   font-weight: normal;
+   font-size: 0.7em;
+   font-style: italic;
+}
+
+#content .sideBar table
+{
+   width: 100%;
+   text-align: center;
+}
+
+#content .sideBar .torStatus .torStatImages
+{
+   margin: 10px 0px;
+}
+
+#content .sideBar .torStatus img
+{
+   width: 100%;
+}
+
+#content .sideBar .fah .status
+{
+   text-align: center;
 }
 
 #content #xkcdAbstraction
 {
-	width: 340px;
-	margin-top: 20px;
+   width: 100%;
+   margin-top: 20px;
 }
 
 #content .mainBody .stig
 {
-	font-style: italic;
-	text-align: center;
+   font-style: italic;
+   text-align: center;
 }
 
 #content .mainBody .intro
 {
-	margin: 20px 375px 20px 15px;
-	text-indent: 20px;
+   margin: 20px 375px 20px 15px;
+   text-indent: 20px;
 }
 
 #content .mainBody div.title
 {
-	text-align: center;
-	font-weight: bold;
-	font-size: 1.25em;
-	margin: 25px 0px 3px 0px;
+   text-align: center;
+   font-weight: bold;
+   font-size: 1.25em;
+   margin: 25px 0px 3px 0px;
 }
 
 #content .mainBody table
 {
-	border-spacing: 2px;
-	border-collapse: collapse;
+   border-spacing: 2px;
+   border-collapse: collapse;
 }
 
 #content .mainBody table td
 {
-	background-color: #fffaf0 /*#FFFFE0 possible background: #e0ffff*/;
-	border: 1px solid #e6e6fa /*#BDB76B*/;
-	border-top: 1px solid #BDB76B;
-	border-bottom: 1px solid #BDB76B;
-	padding: 7px;
+   background-color: #fffaf0 /*#FFFFE0 possible background: #e0ffff*/;
+   border: 1px solid #e6e6fa /*#BDB76B*/;
+   border-top: 1px solid #BDB76B;
+   border-bottom: 1px solid #BDB76B;
+   padding: 7px;
 }
 
 #content .mainBody tr td:first-child
 {
-	width: 210px;
-	text-align: center;
+   width: 210px;
+   text-align: center;
 }
 
 #content #xkcdRealProgrammers
 {
-	width: 700px;
-	margin: 0px auto;
+   width: 700px;
+   margin: 0px auto;
 }
 
 #content img
 {
-	max-width: 100%;
+   max-width: 100%;
 }
 
 #content .description
 {
-	margin-left: 25px;
+   margin-left: 25px;
 }
 

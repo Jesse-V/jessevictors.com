@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html id="top">
    <head>
-      <title>JesseVictors.com</title>
+      <title>Jesse Victors' Personal Website</title>
       <meta charset="UTF-8">
       <link type="text/css" rel="stylesheet" href="resources/galleria/themes/classic/galleria.classic.css">
       <link rel="stylesheet" type="text/css" href="css/common.css"/>
