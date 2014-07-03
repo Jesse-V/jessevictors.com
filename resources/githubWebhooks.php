@@ -1,27 +1,35 @@
 <?php
-    require_once("../_private/githubWebhookKey.php");
+   require_once("_private/githubWebhookKey.php");
 
-    $headers = getallheaders();
-    if (!isset($headers['X-Hub-Signature']))
-    {
-        http_response_code(400);
-        die("Invalid request");
-    }
+   $headers = getallheaders();
+   if (!isset($headers['X-Hub-Signature']))
+   {
+      http_response_code(400);
+      die("Invalid request");
+   }
 
-    $payload = file_get_contents('php://input');
-    $data    = json_decode($payload);
+   $payload = file_get_contents('php://input');
+   //$data    = json_decode($payload);
 
-    $hubSignature = $headers['X-Hub-Signature'];
-    list($algo, $hash) = explode('=', $hubSignature, 2);
-    $payloadHash = hash_hmac($algo, $payload, $_WEBHOOK_KEY);
+   $hubSignature = $headers['X-Hub-Signature'];
+   list($algo, $hash) = explode('=', $hubSignature, 2);
+   $payloadHash = hash_hmac($algo, $payload, $_WEBHOOK_KEY);
 
-    if (_secureStringCompare($hash, $payloadHash))
-        echo "Approved!";
-    else
-    {
-        http_response_code(412);
-        die("Bad secret");
-    }
+   if (!_secureStringCompare($hash, $payloadHash))
+   {
+      http_response_code(412);
+      die("Bad secret");
+   }
 
-    print_r($data);
+   try
+   {
+      date_default_timezone_set("America/Anchorage");
+      $db = new PDO("sqlite:_private/sqlite.db");
+      $db->query("INSERT INTO Github VALUES (".date('U').", '".$payload."')");
+      print_r($db->errorInfo());
+   }
+   catch (PDOException $e)
+   {
+      echo $e->getMessage();
+   }
 ?>

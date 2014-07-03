@@ -9,6 +9,7 @@
    /*background: url('../images/content-bg.png') repeat-x, url('../images/white.jpg') repeat;*/
    background-color: #ADD8E6;
    width: 350px;
+   font-size: 0.95em;
 }
 
 #content .sideBar .section, .torStatus .news
@@ -27,6 +28,12 @@
 #content .sideBar .news .subtitle
 {
    padding: 0px;
+}
+
+#content .sideBar .github .description
+{
+   font-size: 0.8em;
+   font-style: italic;
 }
 
 #content .sideBar .torStatus

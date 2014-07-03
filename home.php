@@ -9,6 +9,32 @@
    }
 
    date_default_timezone_set("America/Anchorage");
+
+   //http://www.php.net/manual/en/function.time.php#108581
+   function timeElapsed($secs)
+   {
+      $bit = array(
+        ' year'        => $secs / 31556926 % 12,
+        ' week'        => $secs / 604800 % 52,
+        ' day'        => $secs / 86400 % 7,
+        ' hour'        => $secs / 3600 % 24,
+        ' minute'    => $secs / 60 % 60,
+        ' second'    => $secs % 60
+        );
+
+      foreach($bit as $k => $v)
+      {
+         if($v > 1)
+            $ret[] = $v . $k . 's';
+         if($v == 1)
+            $ret[] = $v . $k;
+      }
+
+      //array_splice($ret, count($ret)-1, 0, 'and');
+      //$ret[] = 'ago';
+
+      return $ret[0];//join(' ', $ret);
+   }
 ?>
 
 <div class="sideBar">
@@ -25,16 +51,33 @@
          }
       ?>
    </div>
-   <div class="latestCommits section">
+   <div class="github section">
       <div class="subtitle">Github Activity</div>
       <?php
-         $commitList = $db->query("SELECT * FROM Commits");
-         foreach ($commitList as $comm)
+         $activityList = $db->query("SELECT * FROM Github ORDER BY date ASC LIMIT 6");
+         foreach ($activityList as $event)
          {
-            $title = $comm['title'];
-            if (strlen($title) > 28)
-               $title = substr($title, 0, 25)."...";
-            echo '<div class="commit">'.$comm['date'].': '.$title.'</div>';
+            $date = $event['date'];
+            $activity = json_decode($event['activity'], true);
+            echo '<div class="commit">';
+
+            if (isset($activity['head_commit']))
+            { //handle commit
+               $timeAgo    = date('U') - $date;
+               $user      = trim($activity['head_commit']['committer']['username'], '"');
+               $userURL   = "https://github.com/".$user;
+               $repo      = trim($activity['repository']['name'], '"');
+               $repoURL   = trim($activity['repository']['url'], '"');
+               $commit    = trim($activity['head_commit']['message'], '"');
+               $commitURL = trim($activity['head_commit']['url'], '"');
+
+               if (strlen($commit) > 33)
+                  $commit = substr($commit, 0, 30)."...";
+
+               echo '<a href="'.$commitURL.'">'.$commit.'</a><div class="description">by <a href="'.$userURL.'">'.$user.'</a> to <a href="'.$repoURL.'">'.$repo.'</a>, '.timeElapsed($timeAgo).' ago</div>';
+            }
+
+            echo '</div>';
          }
       ?>
    </div>
@@ -45,30 +88,24 @@
       <table class="bandwidthInfo">
          <tr>
             <th>Relay</th>
-            <th>Uptime</th>
-            <th>Bandwidth</th>
+            <th>Observed Traffic</th>
          </tr>
          <?php
             $relayList = $db->query("SELECT * FROM TorRelays");
             foreach ($relayList as $relay)
             {
+               $bandwidthArr = json_decode($relay['bandwidth'], true);
+               $bandwidth = $bandwidthArr['relays']['0']['observed_bandwidth'];
+
                echo '
                <tr>
                   <td>
                      <a href="https://globe.torproject.org/#/relay/'.$relay['fingerprint'].'">'.$relay['name'].'</a>
                   </td>
-                  <td>8d 10hr</td>
-                  <td>'.($relay['bandwidth'] / 1000000.0).' MB/sec</td>
+                  <td>'.number_format((float)$bandwidth / 1000000.0, 2, '.', '').' MB/sec</td>
                </tr>';
             }
          ?>
-         <tr>
-            <td>
-               <div class="status"><a href="https://globe.torproject.org/#/bridge/442EBC25DABEC80363B12580315B8DDDD083BB1A">AlaskaBridge</a>
-            </td>
-            <td>10d 12hr</td>
-            <td>54.04 kB/sec</td>
-         </tr>
       </table>
       <div class="torStatImages">
          <img src="https://metrics.torproject.org/userstats-relay-country.png" alt="Tor users graph">
@@ -102,7 +139,15 @@
             </tr>
             <tr>
                <td>F@h overall</td>
-               <td>41.588 petaFLOPS</td>
+               <td>
+               <?php
+                  $page = file_get_contents('http://fah-web.stanford.edu/cgi-bin/main.py?qtype=osstats2');
+                  preg_match('/\<TD\>Total\<.*/', $page, $total); //match line
+                  preg_match_all('/\<TD\>\d*\<\/TD\>/', $total[0], $total); //get all values
+                  preg_match('/\d+/', $total[0][1], $total);
+                  echo $total[0] / 1000;
+               ?>
+               petaFLOPS</td>
             </tr>
          </table>
          <p>
