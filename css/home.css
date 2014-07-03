@@ -36,6 +36,11 @@
    font-style: italic;
 }
 
+#content .sideBar .github .event
+{
+   padding: 4px 0px;
+}
+
 #content .sideBar .torStatus
 {
    width: 100%;

@@ -1,5 +1,5 @@
 <?php
-   require_once("_private/githubWebhookKey.php");
+   require_once("../_private/githubWebhookKey.php");
 
    $headers = getallheaders();
    if (!isset($headers['X-Hub-Signature']))
@@ -24,7 +24,7 @@
    try
    {
       date_default_timezone_set("America/Anchorage");
-      $db = new PDO("sqlite:_private/sqlite.db");
+      $db = new PDO("sqlite:../_private/sqlite.db");
       $db->query("INSERT INTO Github VALUES (".date('U').", '".$payload."')");
       print_r($db->errorInfo());
    }

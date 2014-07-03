@@ -54,15 +54,20 @@
    <div class="github section">
       <div class="subtitle">Github Activity</div>
       <?php
-         $activityList = $db->query("SELECT * FROM Github ORDER BY date ASC LIMIT 6");
+         $activityList = $db->query("SELECT * FROM Github ORDER BY date DESC");
+         $index = 1;
          foreach ($activityList as $event)
          {
+            if ($index > 6)
+               break;
+
             $date = $event['date'];
             $activity = json_decode($event['activity'], true);
-            echo '<div class="commit">';
 
             if (isset($activity['head_commit']))
             { //handle commit
+               echo '<div class="event">';
+
                $timeAgo    = date('U') - $date;
                $user      = trim($activity['head_commit']['committer']['username'], '"');
                $userURL   = "https://github.com/".$user;
@@ -75,9 +80,10 @@
                   $commit = substr($commit, 0, 30)."...";
 
                echo '<a href="'.$commitURL.'">'.$commit.'</a><div class="description">by <a href="'.$userURL.'">'.$user.'</a> to <a href="'.$repoURL.'">'.$repo.'</a>, '.timeElapsed($timeAgo).' ago</div>';
-            }
 
-            echo '</div>';
+               $index++;
+               echo '</div>';
+            }
          }
       ?>
    </div>
