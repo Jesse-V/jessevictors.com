@@ -9,15 +9,13 @@
    }
 
    date_default_timezone_set("America/Anchorage");
-
-   //I finally host this website myself on my own secure server. I'm happy to say that it's finally hosted on I host this website on my own server, and I'm happy to say that this site is hosted on my own server. , o
+   $newsList = $db->query("SELECT * FROM News ORDER BY ID DESC");
 ?>
 
 <table id="layoutTable">
    <tr>
       <td id="mainBody">
          <?php
-            $newsList = $db->query("SELECT * FROM News");
             foreach ($newsList as $new)
             {
                echo '
@@ -33,7 +31,6 @@
          <div class="title">Recent Posts</div>
          <table>
             <?php
-               $newsList = $db->query("SELECT * FROM News");
                foreach ($newsList as $new)
                {
                   echo '

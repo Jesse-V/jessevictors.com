@@ -21,7 +21,7 @@ r4JSON=$(wget --timeout=60 --tries=3 --quiet -O - $prefix$relay4$postfix 2>/dev/
 e1JSON=$(wget --timeout=60 --tries=3 --quiet -O - $prefix$exit1$postfix 2>/dev/null);
 e2JSON=$(wget --timeout=60 --tries=3 --quiet -O - $prefix$exit2$postfix 2>/dev/null);
 
-dbFile='../../_private/sqlite.db';
+dbFile='../_private/sqlite.db';
 
 sqlite3 $dbFile "UPDATE TorRelays SET bandwidth='$r0JSON' WHERE name='UtahState0';";
 sqlite3 $dbFile "UPDATE TorRelays SET bandwidth='$r1JSON' WHERE name='UtahState1';";

@@ -30,6 +30,16 @@
    padding: 0px;
 }
 
+#content .sideBar .news table .date
+{
+   width: 35%;
+}
+
+#content .sideBar .news table
+{
+   text-align: left;
+}
+
 #content .sideBar .github .description
 {
    font-size: 0.8em;

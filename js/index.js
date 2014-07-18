@@ -48,7 +48,10 @@ function navigate(page)
             contentEl.removeEventListener("transitionend",       switchPage, true);
 
             //replace HTML, swap CSS
-            contentObj.html(jqxhr.responseText);
+            setTimeout(function() {
+               contentObj.html(jqxhr.responseText);
+            }, 0);
+
             $("head #customCSS").attr("href", "css/" + page + ".css");
             contentObj.css({
                "transform": "perspective(700px) rotateY(270deg)",

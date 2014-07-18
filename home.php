@@ -40,16 +40,22 @@
 <div class="sideBar">
    <div class="news section">
       <div class="subtitle">Latest News</div>
-      <?php
-         $newsList = $db->query("SELECT * FROM News");
-         foreach ($newsList as $new)
-         {
-            $title = $new['title'];
-            if (strlen($title) > 28)
-               $title = substr($title, 0, 25)."...";
-            echo '<div class="item">'.$new['date'].': '.$title.'</div>';
-         }
-      ?>
+      <table>
+         <?php
+            $newsList = $db->query("SELECT * FROM News ORDER BY ID DESC");
+            foreach ($newsList as $new)
+            {
+               $title = $new['title'];
+               if (strlen($title) > 28)
+                  $title = substr($title, 0, 25)."...";
+               echo
+                  '<tr>
+                     <td class="date">'.$new['date'].'</td>
+                     <td class="title"><a href="http://www.jessevictors.com/#/blog?='.$new['ID'].'">'.$title.'</a></td>
+                  </tr>';
+            }
+         ?>
+      </table>
    </div>
    <div class="github section">
       <div class="subtitle">Github Activity</div>
