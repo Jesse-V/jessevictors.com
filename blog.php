@@ -9,13 +9,13 @@
    }
 
    date_default_timezone_set("America/Anchorage");
-   $newsList = $db->query("SELECT * FROM News ORDER BY ID DESC");
 ?>
 
 <table id="layoutTable">
    <tr>
       <td id="mainBody">
          <?php
+            $newsList = $db->query("SELECT * FROM News ORDER BY ID DESC");
             foreach ($newsList as $new)
             {
                echo '
@@ -31,6 +31,7 @@
          <div class="title">Recent Posts</div>
          <table>
             <?php
+               $newsList = $db->query("SELECT * FROM News ORDER BY ID DESC");
                foreach ($newsList as $new)
                {
                   echo '

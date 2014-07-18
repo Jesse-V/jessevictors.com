@@ -51,7 +51,7 @@
                echo
                   '<tr>
                      <td class="date">'.$new['date'].'</td>
-                     <td class="title"><a href="http://www.jessevictors.com/#/blog?='.$new['ID'].'">'.$title.'</a></td>
+                     <td class="title">'.$title.'</td>
                   </tr>';
             }
          ?>
