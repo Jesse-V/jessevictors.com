@@ -40,40 +40,29 @@
 <div class="sideBar">
    <div class="news section">
       <div class="subtitle">Latest News</div>
-      <table>
-         <?php
-            $newsList = $db->query("SELECT * FROM News ORDER BY ID DESC");
-            foreach ($newsList as $new)
-            {
-               $title = $new['title'];
-               if (strlen($title) > 28)
-                  $title = substr($title, 0, 25)."...";
-               echo
-                  '<tr>
-                     <td class="date">'.$new['date'].'</td>
-                     <td class="title">'.$title.'</td>
-                  </tr>';
-            }
-         ?>
-      </table>
+      <?php
+         $newsList = $db->query("SELECT * FROM News");
+         foreach ($newsList as $new)
+         {
+            $title = $new['title'];
+            if (strlen($title) > 28)
+               $title = substr($title, 0, 25)."...";
+            echo '<div class="item">'.$new['date'].': '.$title.'</div>';
+         }
+      ?>
    </div>
    <div class="github section">
       <div class="subtitle">Github Activity</div>
       <?php
-         $activityList = $db->query("SELECT * FROM Github ORDER BY date DESC");
-         $index = 1;
+         $activityList = $db->query("SELECT * FROM Github ORDER BY date ASC LIMIT 6");
          foreach ($activityList as $event)
          {
-            if ($index > 6)
-               break;
-
             $date = $event['date'];
             $activity = json_decode($event['activity'], true);
+            echo '<div class="commit">';
 
             if (isset($activity['head_commit']))
             { //handle commit
-               echo '<div class="event">';
-
                $timeAgo    = date('U') - $date;
                $user      = trim($activity['head_commit']['committer']['username'], '"');
                $userURL   = "https://github.com/".$user;
@@ -86,10 +75,9 @@
                   $commit = substr($commit, 0, 30)."...";
 
                echo '<a href="'.$commitURL.'">'.$commit.'</a><div class="description">by <a href="'.$userURL.'">'.$user.'</a> to <a href="'.$repoURL.'">'.$repo.'</a>, '.timeElapsed($timeAgo).' ago</div>';
-
-               $index++;
-               echo '</div>';
             }
+
+            echo '</div>';
          }
       ?>
    </div>
@@ -153,7 +141,7 @@
                <td>F@h overall</td>
                <td>
                <?php
-                  $page = file_get_contents('resources/FAH_stats_page.html');
+                  $page = file_get_contents('http://fah-web.stanford.edu/cgi-bin/main.py?qtype=osstats2');
                   preg_match('/\<TD\>Total\<.*/', $page, $total); //match line
                   preg_match_all('/\<TD\>\d*\<\/TD\>/', $total[0], $total); //get all values
                   preg_match('/\d+/', $total[0][1], $total);
